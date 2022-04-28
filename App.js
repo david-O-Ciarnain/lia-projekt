@@ -9,6 +9,8 @@ import {
   Image,
   TouchableHighlight,
 } from "react-native";
+import Index from './components/Index'
+import Header from "./src/components/header";
 
 export default function App() {
   return (
@@ -25,7 +27,7 @@ export default function App() {
 
         <Button
         
-          style={styles.button}
+        style={styles.button}
           
           title="Tengella"
           
