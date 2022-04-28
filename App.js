@@ -7,21 +7,31 @@ import {
   SafeAreaView,
   Alert,
   Image,
+  TouchableHighlight,
 } from "react-native";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Image source={require("./assets/CS_logo_vert.png")} />
+      <Image 
+        style={styles.header}
+        source={require("./assets/CS_logo_vert.png")}
+      />
+
+
 
       <View style={styles.buttonView}>
         <Image style={styles.image} source={require("./assets/Tengella.png")} />
 
         <Button
+        
           style={styles.button}
+          
           title="Tengella"
+          
           color="#4682B4"
           onPress={() => Alert.alert("Simple Button pressed")}
+          
         />
       </View>
 
@@ -123,11 +133,16 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
 
     marginHorizontal: 8,
+    
   },
 
   header: {
-    color: "#00BFFF",
-    fontSize: 25,
+    marginTop: 20,
+    width: "90%",
+    height: 50,
+    resizeMode: "contain",
+    alignItems: "center",
+    justifyContent: "center"
   },
 
   buttonView: {
@@ -138,11 +153,17 @@ const styles = StyleSheet.create({
   },
 
   image: {
-    width: 105,
-    height: 80,
+    
+    width: 80,
+    height: 70,
+    resizeMode:"contain"
   },
 
   title: {
     textAlign: "center",
+  },
+
+  button:{
+    
   },
 });
