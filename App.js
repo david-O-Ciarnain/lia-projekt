@@ -8,21 +8,48 @@ import {
   Alert,
   Image,
   TouchableHighlight,
+  FlatList
 } from "react-native";
-import Index from './components/Index'
+import Index from './src/components/index'
 import Header from "./src/components/header";
+import LoginScreen from "./src/components/Login";
+import TESTarrayImg from "./src/components/TESTarrayImg";
+
+
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Image 
+      <Image
         style={styles.header}
         source={require("./assets/CS_logo_vert.png")}
       />
+      <View>
+        <FlatList
+          data={TESTarrayImg}
+          renderItem={({ item }) => {
+            return (
+              <View style={styles.buttonView}>
+                <Image style={styles.image} source={item.img} />
+
+                <Button
+                  style={styles.button}
+                  title={item.title}
+
+                  color="#4682B4"
+                  onPress={() => Alert.alert("Simple Button pressed")}
+
+                />
+              </View>
+            )
+          }}
+        />
+      </View>
+      <LoginScreen />
 
 
 
-      <View style={styles.buttonView}>
+      {/* <View style={styles.buttonView}>
         <Image style={styles.image} source={require("./assets/Tengella.png")} />
 
         <Button
@@ -122,7 +149,7 @@ export default function App() {
         />
       </View>
 
-      <StatusBar style="auto" />
+      <StatusBar style="auto" /> */}
     </SafeAreaView>
   );
 }
@@ -135,7 +162,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
 
     marginHorizontal: 8,
-    
+
   },
 
   header: {
@@ -155,17 +182,17 @@ const styles = StyleSheet.create({
   },
 
   image: {
-    
+
     width: 80,
     height: 70,
-    resizeMode:"contain"
+    resizeMode: "contain"
   },
 
   title: {
     textAlign: "center",
   },
 
-  button:{
-    
+  button: {
+
   },
 });
