@@ -11,5 +11,17 @@ export default [
     {
         img: require("../../assets/calender.png"),
         title: "test"
-    }
+    },
+    {
+        img: require("../../assets/nyhet.png"),
+        title: "test"
+    },
+    {
+        img: require("../../assets/nyhet.png"),
+        title: "test"
+    },
+    {
+        img: require("../../assets/nyhet.png"),
+        title: "test"
+    },
 ]

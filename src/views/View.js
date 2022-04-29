@@ -7,16 +7,18 @@ import {
     Alert,
     Image,
     TouchableHighlight,
-    FlatList
+    FlatList,
+    StyleSheet
 } from 'react-native'
 import TESTarrayImg from '../components/TESTarrayImg'
 import Buttons from '../components/Buttons'
-import Header from '../components/Header'
+import Header from '../components/header'
 
 export default function Index() {
     return (
-        <SafeAreaView>
+        <SafeAreaView style={styles.rStyle}>
             <Header />
+            
             <FlatList data={TESTarrayImg} renderItem={({ item }) => {
                 return <Buttons
                     title={item.title}
@@ -24,6 +26,19 @@ export default function Index() {
                 />
             }}
             />
+            
         </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+    rStyle: {
+        height: "100%"
+    },
+
+    btnContainer: {
+      //  justifyContent: "center"
+    }
+
+
+})

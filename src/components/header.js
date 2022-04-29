@@ -8,6 +8,7 @@ import {
   Image,
   TouchableHighlight,
 } from "react-native";
+import { borderColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 
 
 export default function Header() {
@@ -26,18 +27,22 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
 
-    justifyContent: "space-around",
+    justifyContent: "flex-start",
+    flexDirection: "column",
 
     marginHorizontal: 8,
 
   },
 
   header: {
-    marginTop: 20,
+    marginTop: 30,
     width: "90%",
     height: 50,
     resizeMode: "contain",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "flex-start",
+    
   },
+  
+  
 });

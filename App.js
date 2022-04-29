@@ -9,8 +9,9 @@ import {
   Image,
   TouchableHighlight,
 } from "react-native";
+
+import Header from "./src/components/header"
 import Index from "./src/views/View";
-import Header from "./src/components/Header"
 
 export default function App() {
   return (
@@ -24,45 +25,5 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
 
-    justifyContent: "space-around",
 
-    marginHorizontal: 8,
-
-  },
-
-  header: {
-    marginTop: 20,
-    width: "90%",
-    height: 50,
-    resizeMode: "contain",
-    alignItems: "center",
-    justifyContent: "center"
-  },
-
-  buttonView: {
-    backgroundColor: "#4682B4",
-    alignItems: "center",
-    justifyContent: "space-between",
-    flexDirection: "row",
-  },
-
-  image: {
-
-    width: 80,
-    height: 70,
-    resizeMode: "contain"
-  },
-
-  title: {
-    textAlign: "center",
-  },
-
-  button: {
-
-  },
-});
