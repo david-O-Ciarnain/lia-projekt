@@ -1,10 +1,15 @@
 
 export default [
     {
-        img: "word-icon.png",
-        title:"Tengella"
+        img: require("../../assets/word-icon.png"),
+        title: "Tengella"
     },
     {
-        img: "icon.png"
+        img: require("../../assets/icon.png"),
+        title: "other"
+    },
+    {
+        img: require("../../assets/calender.png"),
+        title: "test"
     }
 ]
