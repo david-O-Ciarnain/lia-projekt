@@ -2,55 +2,40 @@
 export default [
     {
         img: require("../../assets/mina_sidor.png"),
-        title: "Mina sidor",
+        title: "MINA SIDOR",
         navigation: "Login"
     },
     {
-        img: require("../../assets/word-icon.png"),
-        title: "Tengella"
+        img: require("../../assets/Tengella.png"),
+        title: "TENGELLA"
     },
     {
-        img: require("../../assets/icon.png"),
-        title: "other"
+        img: require("../../assets/nyhet.png"),
+        title: "NYHETSFLÖDE"
     },
     {
         img: require("../../assets/calender.png"),
-        title: "test"
+        title: "KALENDER"
+    },
+    {
+        img: require("../../assets/arbetsmiljöhandbok.png"),
+        title: "ARBETSMILJÖHANDBOK"
+    },
+   
+    {
+        img: require("../../assets/word-icon.png"),
+        title: "SÄKERHETSDATABLAD"
     },
     {
         img: require("../../assets/nyhet.png"),
-        title: "test"
+        title: "TEST"
     },
     {
         img: require("../../assets/nyhet.png"),
-        title: "test"
+        title: "TEST"
     },
     {
         img: require("../../assets/nyhet.png"),
-        title: "test"
-    },
-    {
-        img: require("../../assets/nyhet.png"),
-        title: "test"
-    },
-    {
-        img: require("../../assets/nyhet.png"),
-        title: "test"
-    },
-    {
-        img: require("../../assets/nyhet.png"),
-        title: "test"
-    },
-    {
-        img: require("../../assets/nyhet.png"),
-        title: "test"
-    },
-    {
-        img: require("../../assets/nyhet.png"),
-        title: "test"
-    },
-    {
-        img: require("../../assets/nyhet.png"),
-        title: "test"
+        title: "TEST"
     },
 ]

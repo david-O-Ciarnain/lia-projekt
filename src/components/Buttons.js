@@ -8,7 +8,8 @@ import {
     Alert,
     Image,
     TouchableHighlight,
-    TouchableOpacity
+    TouchableOpacity,
+    
 } from 'react-native'
 import LoginScreen from './Login'
 
@@ -38,24 +39,30 @@ export default function Buttons({ image, title, screen }) {
 
 const styles = StyleSheet.create({
     image: {
-
+        margin:10,
         width: 80,
-        height: 70,
+        height: 60,
         resizeMode: "contain"
     },
+
     button: {
         width: "100%",
         height: 50
     },
+
     buttonView: {
         backgroundColor: "#4682B4",
         alignItems: "center",
         justifyContent: "space-between",
         flexDirection: "row",
-        marginTop: 10
+        marginTop: 10,
+        
     },
     textStyle: {
-        color: "red"
+        margin:20,
+        fontSize: 20,
+        fontWeight: "normal",
+        color: "#fff"
 
     },
     textContainer: {
