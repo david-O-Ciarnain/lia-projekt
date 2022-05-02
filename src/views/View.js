@@ -18,26 +18,29 @@ export default function Index() {
     return (
         <SafeAreaView style={styles.rStyle}>
             <Header />
-            
+
             <FlatList data={TESTarrayImg} renderItem={({ item }) => {
                 return <Buttons
                     title={item.title}
                     image={item.img}
                 />
             }}
+                keyExtractor={(item, index) => index.toString()}
             />
-            
+
         </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
     rStyle: {
-        height: "100%"
+        flex: 1,
+        height: "100%",
+        overflow: 'scroll'
     },
 
     btnContainer: {
-      //  justifyContent: "center"
+        //  justifyContent: "center"
     }
 
 

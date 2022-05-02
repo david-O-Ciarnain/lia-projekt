@@ -1,6 +1,11 @@
 
 export default [
     {
+        img: require("../../assets/mina_sidor.png"),
+        title: "Mina sidor",
+        navigation: "Login"
+    },
+    {
         img: require("../../assets/word-icon.png"),
         title: "Tengella"
     },
@@ -10,6 +15,30 @@ export default [
     },
     {
         img: require("../../assets/calender.png"),
+        title: "test"
+    },
+    {
+        img: require("../../assets/nyhet.png"),
+        title: "test"
+    },
+    {
+        img: require("../../assets/nyhet.png"),
+        title: "test"
+    },
+    {
+        img: require("../../assets/nyhet.png"),
+        title: "test"
+    },
+    {
+        img: require("../../assets/nyhet.png"),
+        title: "test"
+    },
+    {
+        img: require("../../assets/nyhet.png"),
+        title: "test"
+    },
+    {
+        img: require("../../assets/nyhet.png"),
         title: "test"
     },
     {

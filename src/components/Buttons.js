@@ -7,28 +7,31 @@ import {
     SafeAreaView,
     Alert,
     Image,
-    TouchableHighlight
+    TouchableHighlight,
+    TouchableOpacity
 } from 'react-native'
-import Test from "./TESTarrayImg"
+import LoginScreen from './Login'
 
 
-export default function Buttons({ image, title }) {
+export default function Buttons({ image, title, screen }) {
 
 
     return (
-        <View style={styles.buttonView}>
-            <Image style={styles.image} source={image} />
+        <TouchableOpacity
+            onPress={() => {
+                console.log("pressed")
+            }}
+        >
+            <View style={styles.buttonView}>
 
-            <Button
-
-                style={styles.button}
-
-                title={title}
-
-                color="#4682B4"
-                onPress={() => Alert.alert("Simple Button pressed")}
-            />
-        </View>
+                <Image style={styles.image} source={image} />
+                <View style={styles.textContainer}>
+                    <Text style={styles.textStyle}>
+                        {title}
+                    </Text>
+                </View>
+            </View>
+        </TouchableOpacity>
 
     )
 }
@@ -50,5 +53,12 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         flexDirection: "row",
         marginTop: 10
+    },
+    textStyle: {
+        color: "red"
+
+    },
+    textContainer: {
+
     }
 })
