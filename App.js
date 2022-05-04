@@ -1,9 +1,10 @@
 
+import ChecklistView from "./src/views/ChecklistView";
 import Index from "./src/views/View";
 
 export default function App() {
   return (
-    <Index />
+    <ChecklistView />
     // <SafeAreaView style={styles.container}>
     //   <Image
     //     style={styles.header}
