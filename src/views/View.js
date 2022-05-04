@@ -1,12 +1,6 @@
 import React from 'react'
 import {
-    Text,
-    Button,
-    View,
     SafeAreaView,
-    Alert,
-    Image,
-    TouchableHighlight,
     FlatList,
     StyleSheet
 } from 'react-native'
@@ -14,15 +8,17 @@ import TESTarrayImg from '../components/TESTarrayImg'
 import Buttons from '../components/Buttons'
 import Header from '../components/header'
 
-export default function Index() {
+
+function Index() {
     return (
         <SafeAreaView style={styles.rStyle}>
-            <Header />
+            {/* <Header /> */}
 
             <FlatList data={TESTarrayImg} renderItem={({ item }) => {
                 return <Buttons
                     title={item.title}
                     image={item.img}
+                    screen={item.screen}
                 />
             }}
                 keyExtractor={(item, index) => index.toString()}
@@ -45,3 +41,5 @@ const styles = StyleSheet.create({
 
 
 })
+
+export default Index;

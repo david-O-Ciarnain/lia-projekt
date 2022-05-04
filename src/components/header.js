@@ -1,3 +1,4 @@
+
 import {
   StyleSheet,
   Text,
@@ -8,9 +9,15 @@ import {
   Image,
   TouchableHighlight,
 } from "react-native";
+import { ScreenStack } from "react-native-screens";
+import { StackActions, StackRouter } from "react-navigation";
+import { createStackNavigator, StackView } from "react-navigation-stack";
 
 
-export default function Header() {
+
+
+function Header() {
+
   return (
     <SafeAreaView style={styles.container}>
       <Image
@@ -42,3 +49,5 @@ const styles = StyleSheet.create({
 
 
 });
+
+export default Header;

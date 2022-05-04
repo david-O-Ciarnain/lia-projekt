@@ -1,13 +1,15 @@
+import { Linking } from "react-native"
 
 export default [
     {
         img: require("../../assets/mina_sidor.png"),
         title: "MINA SIDOR",
-        navigation: "Login"
+        screen: "MinaSidor"
     },
     {
         img: require("../../assets/Tengella.png"),
-        title: "TENGELLA"
+        title: "TENGELLA",
+        screen: "Tengella"
     },
     {
         img: require("../../assets/nyhet.png"),
@@ -21,7 +23,7 @@ export default [
         img: require("../../assets/arbetsmiljöhandbok.png"),
         title: "ARBETSMILJÖHANDBOK"
     },
-   
+
     {
         img: require("../../assets/word-icon.png"),
         title: "SÄKERHETSDATABLAD"

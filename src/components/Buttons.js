@@ -9,18 +9,20 @@ import {
     Image,
     TouchableHighlight,
     TouchableOpacity,
-    
+
 } from 'react-native'
-import LoginScreen from './Login'
+import { withNavigation } from 'react-navigation';
 
 
-export default function Buttons({ image, title, screen }) {
+
+function Buttons({ image, title, screen, navigation }) {
 
 
     return (
+
         <TouchableOpacity
             onPress={() => {
-                console.log("pressed")
+                navigation.navigate(screen)
             }}
         >
             <View style={styles.buttonView}>
@@ -39,7 +41,7 @@ export default function Buttons({ image, title, screen }) {
 
 const styles = StyleSheet.create({
     image: {
-        margin:10,
+        margin: 10,
         width: 80,
         height: 60,
         resizeMode: "contain"
@@ -56,10 +58,10 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         flexDirection: "row",
         marginTop: 10,
-        
+
     },
     textStyle: {
-        margin:20,
+        margin: 20,
         fontSize: 20,
         fontWeight: "normal",
         color: "#fff"
@@ -69,3 +71,5 @@ const styles = StyleSheet.create({
 
     }
 })
+
+export default withNavigation(Buttons);
