@@ -23,6 +23,7 @@ export default function Index() {
                 return <Buttons
                     title={item.title}
                     image={item.img}
+                    navigation={item.navigation}
                 />
             }}
                 keyExtractor={(item, index) => index.toString()}

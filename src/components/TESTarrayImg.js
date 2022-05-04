@@ -1,3 +1,6 @@
+import { Linking } from "react-native-web";
+
+
 
 export default [
     {
@@ -7,7 +10,8 @@ export default [
     },
     {
         img: require("../../assets/Tengella.png"),
-        title: "TENGELLA"
+        title: "TENGELLA",
+        navigation:Linking.openURL('https://portal.tengella.se/Home/Login')
     },
     {
         img: require("../../assets/nyhet.png"),

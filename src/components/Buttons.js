@@ -9,19 +9,19 @@ import {
     Image,
     TouchableHighlight,
     TouchableOpacity,
+    Linking,
     
 } from 'react-native'
 import LoginScreen from './Login'
 
 
-export default function Buttons({ image, title, screen }) {
+export default function Buttons({ navigation, image, title, screen }) {
 
+    
 
     return (
         <TouchableOpacity
-            onPress={() => {
-                console.log("pressed")
-            }}
+        onPress={()=>{Linking.openURL('https://portal.tengella.se/Home/Login')}}
         >
             <View style={styles.buttonView}>
 
