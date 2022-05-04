@@ -21,7 +21,7 @@ export default function Buttons({ navigation, image, title, screen }) {
 
     return (
         <TouchableOpacity
-        onPress={()=>{Linking.openURL('https://portal.tengella.se/Home/Login')}}
+        //onPress={()=>{Linking.openURL('https://portal.tengella.se/Home/Login')}}
         >
             <View style={styles.buttonView}>
 

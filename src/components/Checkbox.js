@@ -5,7 +5,7 @@ import BouncyCheckbox from "react-native-bouncy-checkbox";
 
 
 
-export default function Checkbox() {
+export default function Checkbox({text}) {
 
   const [isSelected, setSelection] = useState(false);
 
@@ -14,11 +14,12 @@ export default function Checkbox() {
       <View style={styles.checkboxContainer}>
         <BouncyCheckbox
           value={isSelected}
-          onValueChange={setSelection}
+          //onValueChange={setSelection}
           style={styles.checkbox}
-          fillColor="yellowgreen"
+          fillColor="#4682B4"
+          size={35}
+          text = {text}
         />
-        <Text style={styles.label}>Klar?</Text>
       </View>
     </View>
   );
@@ -31,13 +32,15 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   checkboxContainer: {
-    flexDirection: "row",
-    marginBottom: 20,
+    flexDirection: "column",
+
   },
   checkbox: {
     alignSelf: "center",
+    marginHorizontal: 8
   },
   label: {
     margin: 8,
+
   },
 });
