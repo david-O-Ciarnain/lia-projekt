@@ -1,12 +1,12 @@
 import Header from "../components/header";
 import Checkbox from "../components/Checkbox";
 import { SafeAreaView, StyleSheet, Text } from "react-native";
-import HemstadAllaRumArray from "../components/HemstadAllaRumArray"
-import HemstadKokArray from "../components/HemstadKokArray"
-import HemstadBadrumArray from "../components/HemstadBadrumArray"
-import HemstadSovrumArray from "../components/HemstadSovrumArray";
-import HemstadAllVardagsrumArray from "../components/HemstadAllVardagsrumArray";
-import HemstadHallArray from "../components/HemstadHallArray";
+import HemstadAllaRumArray from "../Lists/HemstadAllaRumArray"
+import HemstadKokArray from "../Lists/HemstadKokArray"
+import HemstadBadrumArray from "../Lists/HemstadBadrumArray"
+import HemstadSovrumArray from "../Lists/HemstadSovrumArray";
+import HemstadAllVardagsrumArray from "../Lists/HemstadAllVardagsrumArray";
+import HemstadHallArray from "../Lists/HemstadHallArray";
 import { FlatList } from "react-native";
 
 

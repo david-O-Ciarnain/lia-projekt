@@ -2,9 +2,9 @@ import { SafeAreaView, StyleSheet, Text } from "react-native";
 import Checkbox from "../components/Checkbox";
 import Header from "../components/header";
 import { FlatList } from "react-native";
-import FlyttstadKokArray from "../components/FlyttstadKokArray";
-import FlyttstadRumArray from "../components/FlyttstadRumArray";
-import FlyttstadBadrumArray from "../components/FlyttstadBadrumArray";
+import FlyttstadKokArray from "../Lists/FlyttstadKokArray";
+import FlyttstadRumArray from "../Lists/FlyttstadRumArray";
+import FlyttstadBadrumArray from "../Lists/FlyttstadBadrumArray";
 
 
 
