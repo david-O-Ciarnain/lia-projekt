@@ -6,14 +6,10 @@ import {
 } from 'react-native'
 import TESTarrayImg from '../components/TESTarrayImg'
 import Buttons from '../components/Buttons'
-import Header from '../components/header'
-
 
 function Index() {
     return (
         <SafeAreaView style={styles.rStyle}>
-            {/* <Header /> */}
-
             <FlatList data={TESTarrayImg} renderItem={({ item }) => {
                 return <Buttons
                     title={item.title}
@@ -23,7 +19,6 @@ function Index() {
             }}
                 keyExtractor={(item, index) => index.toString()}
             />
-
         </SafeAreaView>
     )
 }
@@ -38,8 +33,6 @@ const styles = StyleSheet.create({
     btnContainer: {
         //  justifyContent: "center"
     }
-
-
 })
 
 export default Index;

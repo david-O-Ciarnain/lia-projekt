@@ -9,9 +9,11 @@ import {
     Image,
     TouchableHighlight,
     TouchableOpacity,
+    Linking,
 
 } from 'react-native'
 import { withNavigation } from 'react-navigation';
+
 
 
 
@@ -22,7 +24,12 @@ function Buttons({ image, title, screen, navigation }) {
 
         <TouchableOpacity
             onPress={() => {
-                navigation.navigate(screen)
+                //fler external länkar sätt screen till external och lägg till key-value i testarray för länken.
+                if (screen == "Tengella") {
+                    Linking.openURL('https://portal.tengella.se/Home/Login').catch((err => console.log("An error occured " + err)))
+                } else {
+                    navigation.navigate(screen)
+                }
             }}
         >
             <View style={styles.buttonView}>
