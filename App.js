@@ -1,5 +1,5 @@
 
-import ChecklistView from "./src/views/ChecklistView";
+import ChecklistView from "./src/views/FlyttstadView";
 import Index from "./src/views/View";
 
 export default function App() {
