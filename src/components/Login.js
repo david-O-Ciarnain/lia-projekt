@@ -1,9 +1,22 @@
 import React, { useState } from "react";
 import { TextInput, View, StyleSheet, Button, Modal } from "react-native";
 
+const users = [
+    {
+        username: "test1",
+        password: "abc"
+    },
+    {
+        username: "test2",
+        password: "123"
+    }
+]
 
-
-
+const handleLogin = (username, password) => {
+    console.log("Test")
+    console.log(username)
+    console.log(password)
+}
 
 export default function LoginScreen() {
 
@@ -30,7 +43,7 @@ export default function LoginScreen() {
                 <Button
                     style={style.loginButton}
                     title="Logga in"
-                    onPress={() => console.log("login attempt")}
+                    onPress={() => handleLogin(username, password)}
                 ></Button>
 
             </Modal>
