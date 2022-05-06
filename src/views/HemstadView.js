@@ -16,7 +16,10 @@ export default function HemstadView() {
 
         <SafeAreaView>
             <Header />
+            <Text>HEMSTÄDNING</Text>
+
             <Text>Försök se vad kunden ser. T.ex. En dammig lampa, tvålkopp, dörrmatta, fingeravtryck i barnhöjd!</Text>
+            
             <Text>Alla rum</Text>
 
         <FlatList data={HemstadAllaRumArray} renderItem={({ item }) => {

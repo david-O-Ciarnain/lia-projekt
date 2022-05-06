@@ -13,7 +13,10 @@ export default function ChecklistView() {
     return(
         <SafeAreaView>
             <Header />
+            <Text>FLYTTSTÄDNING</Text>
+
             <Text>Observera att även om du följer denna checklista, har du ansvar att städa detaljer som eventuellt inte finns med på listan</Text>
+            
             <Text>Kök</Text>
 
         <FlatList data={FlyttstadKokArray} renderItem={({ item }) => {
