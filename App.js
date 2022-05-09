@@ -4,6 +4,11 @@ import { createStackNavigator } from "react-navigation-stack";
 import {
   StyleSheet,
 } from "react-native";
+
+import ByggstadView from "./src/views/ByggstadView";
+import ChecklistView from "./src/views/FlyttstadView";
+import HemstadView from "./src/views/HemstadView";
+import StorstadView from "./src/views/StorstadView";
 import Index from "./src/views/View";
 import MinaSidor from "./src/views/MinaSidor";
 import Header from "./src/components/header";
@@ -12,6 +17,7 @@ import Arbetsmiljohandbok from './src/views/Arbetsmiljohandbok';
 import Nyhetsflode from './src/views/Nyhetsflode';
 import Kalender from './src/views/Kalender';
 import Sakerhetsdatablad from './src/views/Sakerhetsdatablad';
+import Checklistor from './src/views/Checklistor';
 
 
 //const [userLoggedin, setUserLoggedin] = React.useState('false')
@@ -26,7 +32,9 @@ const navigator = createStackNavigator({
   Arbetsmiljohandbok: Arbetsmiljohandbok,
   Nyhetsflode: Nyhetsflode,
   Kalender: Kalender,
-  Sakerhetsdatablad: Sakerhetsdatablad
+  Sakerhetsdatablad: Sakerhetsdatablad,
+  Checklistor: Checklistor,
+  ByggstadView: ByggstadView
 
 
 

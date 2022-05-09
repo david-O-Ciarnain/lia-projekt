@@ -33,7 +33,8 @@ export default [
     },
     {
         img: require("../../assets/nyhet.png"),
-        title: "TEST"
+        title: "CheckListor",
+        screen: "Checklistor"
     },
     {
         img: require("../../assets/nyhet.png"),
