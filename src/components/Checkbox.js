@@ -14,7 +14,7 @@ export default function Checkbox({ text }) {
       <View style={styles.checkboxContainer}>
         <BouncyCheckbox
           value={isSelected}
-          //onValueChange={setSelection}
+          onValueChange={setSelection}
           style={styles.checkbox}
           fillColor="#4682B4"
           size={35}

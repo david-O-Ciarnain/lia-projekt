@@ -19,22 +19,24 @@ export default function LoginScreen({ navigation }) {
         <TouchableOpacity style={styles.viewContainer}
             onPress={() => navigation.goBack()}
         >
-            <Text>Login</Text>
-            <TouchableWithoutFeedback style={styles.center}>
-                <View style={styles.loginContainer}>
-                    <TextInput placeholder='Username'
-                        onChangeText={(text) => setUserName(text)}
-                        style={styles.textInputFields} />
+            <View>
+                <Text>Login</Text>
+                <TouchableWithoutFeedback style={styles.center}>
+                    <View style={styles.loginContainer}>
+                        <TextInput placeholder='Username'
+                            onChangeText={(text) => setUserName(text)}
+                            style={styles.textInputFields} />
 
-                    <TextInput placeholder='Password'
-                        onChangeText={(text) => setPassword(text)}
-                        secureTextEntry={true}
-                        style={styles.textInputFields} />
-                    <Button title="Login"
-                        onPress={handleLogin(users, username, password)} />
-                    <Button title="Forgot Password" />
-                </View>
-            </TouchableWithoutFeedback>
+                        <TextInput placeholder='Password'
+                            onChangeText={(text) => setPassword(text)}
+                            secureTextEntry={true}
+                            style={styles.textInputFields} />
+                        <Button title="Login"
+                            onPress={handleLogin(users, username, password)} />
+                        <Button title="Forgot Password" />
+                    </View>
+                </TouchableWithoutFeedback>
+            </View>
         </TouchableOpacity >
     )
 }
