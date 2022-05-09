@@ -12,20 +12,24 @@ export default [
     },
     {
         img: require("../../assets/nyhet.png"),
-        title: "NYHETSFLÖDE"
+        title: "NYHETSFLÖDE",
+        screen: "Nyhetsflode"
     },
     {
         img: require("../../assets/calender.png"),
-        title: "KALENDER"
+        title: "KALENDER",
+        screen: "Kalender"
     },
     {
         img: require("../../assets/arbetsmiljöhandbok.png"),
-        title: "ARBETSMILJÖHANDBOK"
+        title: "ARBETSMILJÖHANDBOK",
+        screen: "Arbetsmiljohandbok"
     },
 
     {
         img: require("../../assets/word-icon.png"),
-        title: "SÄKERHETSDATABLAD"
+        title: "SÄKERHETSDATABLAD",
+        screen: "Sakerhetsdatablad"
     },
     {
         img: require("../../assets/nyhet.png"),

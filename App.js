@@ -8,6 +8,10 @@ import Index from "./src/views/View";
 import MinaSidor from "./src/views/MinaSidor";
 import Header from "./src/components/header";
 import LoginScreen from "./src/views/Login";
+import Arbetsmiljohandbok from './src/views/Arbetsmiljohandbok';
+import Nyhetsflode from './src/views/Nyhetsflode';
+import Kalender from './src/views/Kalender';
+import Sakerhetsdatablad from './src/views/Sakerhetsdatablad';
 
 
 //const [userLoggedin, setUserLoggedin] = React.useState('false')
@@ -18,7 +22,12 @@ import LoginScreen from "./src/views/Login";
 const navigator = createStackNavigator({
   Index: Index,
   MinaSidor: MinaSidor,
-  Login: LoginScreen
+  Login: LoginScreen,
+  Arbetsmiljohandbok: Arbetsmiljohandbok,
+  Nyhetsflode: Nyhetsflode,
+  Kalender: Kalender,
+  Sakerhetsdatablad: Sakerhetsdatablad
+
 
 
 }, {
@@ -26,7 +35,8 @@ const navigator = createStackNavigator({
   defaultNavigationOptions: {
     title: "",
     headerBackground: () => <Header />,
-    headerBackTitleVisible: true,
+    headerBackTitleVisible: false,
+    animationEnabled: false
 
   }
 })
