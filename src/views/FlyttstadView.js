@@ -8,51 +8,50 @@ import FlyttstadBadrumArray from "../Lists/FlyttstadBadrumArray";
 
 
 
-export default function ChecklistView() {
+export default function FlyttstadView() {
 
-    return(
+    return (
         <SafeAreaView>
-            <Header />
             <Text>FLYTTSTÄDNING</Text>
 
             <Text>Observera att även om du följer denna checklista, har du ansvar att städa detaljer som eventuellt inte finns med på listan</Text>
-            
+
             <Text>Kök</Text>
 
-        <FlatList data={FlyttstadKokArray} renderItem={({ item }) => {
-            return <Checkbox
+            <FlatList data={FlyttstadKokArray} renderItem={({ item }) => {
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
-        <Text>Rum</Text>
+            <Text>Rum</Text>
 
-        <FlatList data={FlyttstadRumArray} renderItem={({ item }) => {
-            return <Checkbox
+            <FlatList data={FlyttstadRumArray} renderItem={({ item }) => {
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
-        <Text>Badrum/Wc</Text>
+            <Text>Badrum/Wc</Text>
 
-        <FlatList data={FlyttstadBadrumArray} renderItem={({ item }) => {
-            return <Checkbox
+            <FlatList data={FlyttstadBadrumArray} renderItem={({ item }) => {
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
-        <Text>Fönsterputs</Text>
-        <Text>Samtliga fönster tvättas på alla sidor, färg och tejprester avlägsnas om möjlighet finns. 
-            Inget rakblad eller liknande används om det inte finns en överenskommelse. Fönsterbågar och 
-            snickerier avtorkas, avtorkning av alla berörda ytor, både vågräta och lodräta. </Text>
-        
-        
+            <Text>Fönsterputs</Text>
+            <Text>Samtliga fönster tvättas på alla sidor, färg och tejprester avlägsnas om möjlighet finns.
+                Inget rakblad eller liknande används om det inte finns en överenskommelse. Fönsterbågar och
+                snickerier avtorkas, avtorkning av alla berörda ytor, både vågräta och lodräta. </Text>
+
+
         </SafeAreaView>
     )
 }

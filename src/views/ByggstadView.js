@@ -17,7 +17,6 @@ export default function ByggstadView() {
     return (
 
         <SafeAreaView>
-            <Header />
             <Text>BYGGSTÄDNING</Text>
 
             <Text> Generellt gäller att förekommande skyddstäckning på golv och i trappor ska tas bort,
@@ -29,91 +28,91 @@ export default function ByggstadView() {
             <Text>Fönsterputsning</Text>
 
             <FlatList data={ByggstadFonsterArray} renderItem={({ item }) => {
-            return <Checkbox
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
-        <Text>Rum</Text>
-        <Text>Avtorkning och rengöring av följande: </Text>    
+            <Text>Rum</Text>
+            <Text>Avtorkning och rengöring av följande: </Text>
 
-        <FlatList data={ByggstadRumArray} renderItem={({ item }) => {
-            return <Checkbox
+            <FlatList data={ByggstadRumArray} renderItem={({ item }) => {
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
-        <Text>Kök</Text>
-        <Text>Avtorkning och rengöring av följande: </Text>
+            <Text>Kök</Text>
+            <Text>Avtorkning och rengöring av följande: </Text>
 
-        <FlatList data={ByggstadKokArray} renderItem={({ item }) => {
-            return <Checkbox
+            <FlatList data={ByggstadKokArray} renderItem={({ item }) => {
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
-        <Text>Våtrum</Text>
-        <Text>Avtorkning och rengöring av följande: </Text>
+            <Text>Våtrum</Text>
+            <Text>Avtorkning och rengöring av följande: </Text>
 
-        <FlatList data={ByggstadVatrumArray} renderItem={({ item }) => {
-            return <Checkbox
+            <FlatList data={ByggstadVatrumArray} renderItem={({ item }) => {
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
-        <Text>Inglasat uterum/balkong</Text>
+            <Text>Inglasat uterum/balkong</Text>
 
-        <FlatList data={ByggstadUtermBalkongArray} renderItem={({ item }) => {
-            return <Checkbox
+            <FlatList data={ByggstadUtermBalkongArray} renderItem={({ item }) => {
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
-        <Text>Trapphall</Text>
-        <Text>Avtorkning och rengöring av följande: </Text>
+            <Text>Trapphall</Text>
+            <Text>Avtorkning och rengöring av följande: </Text>
 
-        <FlatList data={ByggstadTrapphallArray} renderItem={({ item }) => {
-            return <Checkbox
+            <FlatList data={ByggstadTrapphallArray} renderItem={({ item }) => {
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
-        <Text>Hiss</Text>
-        <Text>Avtorkning och rengöring av följande: </Text>
+            <Text>Hiss</Text>
+            <Text>Avtorkning och rengöring av följande: </Text>
 
-        <FlatList data={ByggstadHissArray} renderItem={({ item }) => {
-            return <Checkbox
+            <FlatList data={ByggstadHissArray} renderItem={({ item }) => {
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
-        <Text>Tillägskrav vid städning av teknikutrymmen samt förråd</Text>
+            <Text>Tillägskrav vid städning av teknikutrymmen samt förråd</Text>
 
-        <FlatList data={ByggstadTillaggArray} renderItem={({ item }) => {
-            return <Checkbox
+            <FlatList data={ByggstadTillaggArray} renderItem={({ item }) => {
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
 
         </SafeAreaView>
-        
+
     )
 
 

@@ -15,70 +15,69 @@ export default function HemstadView() {
     return (
 
         <SafeAreaView>
-            <Header />
             <Text>HEMSTÄDNING</Text>
 
             <Text>Försök se vad kunden ser. T.ex. En dammig lampa, tvålkopp, dörrmatta, fingeravtryck i barnhöjd!</Text>
-            
+
             <Text>Alla rum</Text>
 
-        <FlatList data={HemstadAllaRumArray} renderItem={({ item }) => {
-            return <Checkbox
+            <FlatList data={HemstadAllaRumArray} renderItem={({ item }) => {
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
-        <Text>Kök</Text>
+            <Text>Kök</Text>
 
-        <FlatList data={HemstadKokArray} renderItem={({ item }) => {
-            return <Checkbox
+            <FlatList data={HemstadKokArray} renderItem={({ item }) => {
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
-        <Text>Badrum/WC</Text>
+            <Text>Badrum/WC</Text>
 
-        <FlatList data={HemstadBadrumArray} renderItem={({ item }) => {
-            return <Checkbox
+            <FlatList data={HemstadBadrumArray} renderItem={({ item }) => {
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
-        <Text>Sovrum</Text>
+            <Text>Sovrum</Text>
 
-        <FlatList data={HemstadSovrumArray} renderItem={({ item }) => {
-            return <Checkbox
+            <FlatList data={HemstadSovrumArray} renderItem={({ item }) => {
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
-        <Text>Allrum/Vardagsrum</Text>
+            <Text>Allrum/Vardagsrum</Text>
 
-        <FlatList data={HemstadAllVardagsrumArray} renderItem={({ item }) => {
-            return <Checkbox
+            <FlatList data={HemstadAllVardagsrumArray} renderItem={({ item }) => {
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
-        <Text>Hall</Text>
+            <Text>Hall</Text>
 
-        <FlatList data={HemstadHallArray} renderItem={({ item }) => {
-            return <Checkbox
+            <FlatList data={HemstadHallArray} renderItem={({ item }) => {
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
         </SafeAreaView>
 

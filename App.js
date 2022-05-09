@@ -6,7 +6,6 @@ import {
 } from "react-native";
 
 import ByggstadView from "./src/views/ByggstadView";
-import ChecklistView from "./src/views/FlyttstadView";
 import HemstadView from "./src/views/HemstadView";
 import StorstadView from "./src/views/StorstadView";
 import Index from "./src/views/View";
@@ -18,6 +17,7 @@ import Nyhetsflode from './src/views/Nyhetsflode';
 import Kalender from './src/views/Kalender';
 import Sakerhetsdatablad from './src/views/Sakerhetsdatablad';
 import Checklistor from './src/views/Checklistor';
+import FlyttstadView from './src/views/FlyttstadView';
 
 
 //const [userLoggedin, setUserLoggedin] = React.useState('false')
@@ -34,7 +34,10 @@ const navigator = createStackNavigator({
   Kalender: Kalender,
   Sakerhetsdatablad: Sakerhetsdatablad,
   Checklistor: Checklistor,
-  ByggstadView: ByggstadView
+  ByggstadView: ByggstadView,
+  StorstadView: StorstadView,
+  FlyttstadView: FlyttstadView,
+  HemstadView: HemstadView
 
 
 

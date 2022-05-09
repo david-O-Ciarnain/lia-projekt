@@ -14,18 +14,23 @@ export default function Checklistor() {
     const checkListArray = [
         {
             img: require("../../assets/mina_sidor.png"),
-            title: "Login",
+            title: "Byggstäd",
             screen: "ByggstadView"
         },
         {
             img: require("../../assets/mina_sidor.png"),
-            title: "Login",
-            screen: "ByggstadView"
+            title: "Stor Städ",
+            screen: "StorstadView"
         },
         {
             img: require("../../assets/mina_sidor.png"),
-            title: "Login",
-            screen: "ByggstadView"
+            title: "Flytt Städ",
+            screen: "FlyttstadView"
+        },
+        {
+            img: require("../../assets/mina_sidor.png"),
+            title: "Hem Städ",
+            screen: "HemstadView"
         }
     ]
 

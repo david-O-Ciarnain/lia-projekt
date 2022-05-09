@@ -12,48 +12,47 @@ export default function StorstadView() {
     return (
 
         <SafeAreaView>
-            <Header />
             <Text>STORSTÄDNING</Text>
-            
+
             <Text>Kök</Text>
 
             <FlatList data={StorstadKokArray} renderItem={({ item }) => {
-            return <Checkbox
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />  
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
-        <Text>Badrum</Text> 
+            <Text>Badrum</Text>
 
-         <FlatList data={StorstadBadrumArray} renderItem={({ item }) => {
-            return <Checkbox
+            <FlatList data={StorstadBadrumArray} renderItem={({ item }) => {
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
-        <Text>Alla rum</Text>
+            <Text>Alla rum</Text>
 
-        <FlatList data={StorstadAllaRumArray} renderItem={({ item }) => {
-            return <Checkbox
+            <FlatList data={StorstadAllaRumArray} renderItem={({ item }) => {
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
-        <Text>Extra tillägg</Text>
+            <Text>Extra tillägg</Text>
 
-        <FlatList data={StorstadTillaggArray} renderItem={({ item }) => {
-            return <Checkbox
+            <FlatList data={StorstadTillaggArray} renderItem={({ item }) => {
+                return <Checkbox
                     text={item.text}
-            /> 
-        }}
-        keyExtractor={(item, index) => index.toString()}
-        />
+                />
+            }}
+                keyExtractor={(item, index) => index.toString()}
+            />
 
 
 
