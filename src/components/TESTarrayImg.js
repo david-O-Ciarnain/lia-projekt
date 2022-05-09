@@ -2,8 +2,8 @@
 export default [
     {
         img: require("../../assets/mina_sidor.png"),
-        title: "MINA SIDOR",
-        screen: "MinaSidor"
+        title: "Login",
+        screen: "Login"
     },
     {
         img: require("../../assets/Tengella.png"),

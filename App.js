@@ -1,3 +1,4 @@
+import React from 'react'
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 import {
@@ -6,7 +7,10 @@ import {
 import Index from "./src/views/View";
 import MinaSidor from "./src/views/MinaSidor";
 import Header from "./src/components/header";
+import LoginScreen from "./src/views/Login";
 
+
+//const [userLoggedin, setUserLoggedin] = React.useState('false')
 
 
 
@@ -14,6 +18,7 @@ import Header from "./src/components/header";
 const navigator = createStackNavigator({
   Index: Index,
   MinaSidor: MinaSidor,
+  Login: LoginScreen
 
 
 }, {

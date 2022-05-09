@@ -7,6 +7,12 @@ import {
 import TESTarrayImg from '../components/TESTarrayImg'
 import Buttons from '../components/Buttons'
 
+
+//Check if logged in, if logged in show mina sidor and other buttons with access, otherwise show "standard view"
+
+
+
+
 function Index() {
     return (
         <SafeAreaView style={styles.rStyle}>

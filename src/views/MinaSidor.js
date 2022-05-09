@@ -1,28 +1,27 @@
 import { Text, View, StyleSheet } from 'react-native';
 import LoginScreen from '../components/Login';
+import navigation from 'react-navigation'
 
 
 
-function MinaSidor(userIsLoggedIn) {
+function MinaSidor(userIsLoggedIn, navigation) {
     userIsLoggedIn = false;
 
-    if (userIsLoggedIn === false) {
-        return (
-            <View>
-                <LoginScreen />
-            </View>
-        )
-    } else {
+    // if (userIsLoggedIn === false) {
+    //     return (
+    //         navigation.navigate('Index')
+    //     )
+    // } else {}
 
-        return (
-            <View>
-                <Text>
-                    <Text>Not logged in!!!!</Text>
-                </Text>
-            </View>
-        )
-    }
+    return (
+        <View>
+            <Text>
+                <Text>Not logged in!!!!</Text>
+            </Text>
+        </View>
+    )
 }
+
 
 export default MinaSidor;
 
