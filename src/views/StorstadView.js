@@ -6,6 +6,7 @@ import StorstadKokArray from "../Lists/StorstadKokArray"
 import StorstadBadrumArray from "../Lists/StorstadBadrumArray";
 import StorstadAllaRumArray from "../Lists/StorstadAllaRumArray";
 import StorstadTillaggArray from "../Lists/StorstadTillaggArray";
+import { View } from "react-native";
 
 export default function StorstadView() {
 
@@ -58,5 +59,7 @@ export default function StorstadView() {
 
 
         </SafeAreaView>
+        
     )
 }
+

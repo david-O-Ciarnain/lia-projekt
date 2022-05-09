@@ -7,7 +7,7 @@ import Index from "./src/views/View";
 
 export default function App() {
   return (
-    <StorstadView />
+    <ByggstadView />
     // <SafeAreaView style={styles.container}>
     //   <Image
     //     style={styles.header}

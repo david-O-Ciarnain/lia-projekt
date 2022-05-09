@@ -11,7 +11,7 @@ export default [
         text: "Putsa speglar"
     },
     {
-        text: "Vik kläder, puffa kuddar, lägg i ordning tidningar, fjärrkontroller mm"
+        text: "Vik pläder, puffa kuddar, lägg i ordning tidningar, fjärrkontroller mm"
     },
     {
         text: "Dammsug soffa ovanpå (lyft ej dynor)"

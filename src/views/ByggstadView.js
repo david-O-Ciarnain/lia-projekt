@@ -10,6 +10,11 @@ import ByggstadUtermBalkongArray from "../Lists/ByggstadUtermBalkongArray";
 import ByggstadTrapphallArray from "../Lists/ByggstadTrapphallArray";
 import ByggstadHissArray from "../Lists/ByggstadHissArray";
 import ByggstadTillaggArray from "../Lists/ByggstadTillaggArray";
+import ByggstadPersonalbodArray from "../Lists/ByggstadPersonalbodArray";
+import ByggstadPersonalbodExtraArray from "../Lists/ByggstadPersonalbodExtraArray";
+import ByggstadKontorsbodArray from "../Lists/ByggstadKontorsbodArray";
+import ByggstadKontorsbodExtraArray from "../Lists/ByggstadKontorsbodExtraArray";
+import ByggstadHygienbodArray from "../Lists/ByggstadHygienbodArray";
 
 
 export default function ByggstadView() {
@@ -20,7 +25,7 @@ export default function ByggstadView() {
             <Header />
             <Text>BYGGSTÄDNING</Text>
 
-            <Text> Generellt gäller att förekommande skyddstäckning på golv och i trappor ska tas bort,
+            <Text>Generellt gäller att förekommande skyddstäckning på golv och i trappor ska tas bort,
                 leverantörens städningsanvisningar för exempelvis trägolv, plastmatta, linoleum, textilmatta,
                 köksinredning, vitvaror, undertak, kakel och klinker mm. ska följas!
             </Text>
@@ -110,6 +115,60 @@ export default function ByggstadView() {
         }}
         keyExtractor={(item, index) => index.toString()}
         />
+
+        <Text>Bodstädning</Text>
+        <Text>Varje gång: </Text>
+
+        <FlatList data={ByggstadPersonalbodArray} renderItem={({ item }) => {
+            return <Checkbox
+                    text={item.text}
+            /> 
+        }}
+        keyExtractor={(item, index) => index.toString()}
+        />
+
+        <Text>En gång i månaden: </Text>
+
+        <FlatList data={ByggstadPersonalbodExtraArray} renderItem={({ item }) => {
+            return <Checkbox
+                    text={item.text}
+            /> 
+        }}
+        keyExtractor={(item, index) => index.toString()}
+        />
+
+        <Text>Kontorsbod</Text>
+        <Text>Varje gång: </Text>
+
+        <FlatList data={ByggstadKontorsbodArray} renderItem={({ item }) => {
+            return <Checkbox
+                    text={item.text}
+            /> 
+        }}
+        keyExtractor={(item, index) => index.toString()}
+        />
+
+        <Text>En gång i månaden: </Text>
+
+        <FlatList data={ByggstadKontorsbodExtraArray} renderItem={({ item }) => {
+            return <Checkbox
+                    text={item.text}
+            /> 
+        }}
+        keyExtractor={(item, index) => index.toString()}
+        />
+
+        <Text>Hygienbod</Text>
+        <Text>Varje gång: </Text>
+
+        <FlatList data={ByggstadHygienbodArray} renderItem={({ item }) => {
+            return <Checkbox
+                    text={item.text}
+            /> 
+        }}
+        keyExtractor={(item, index) => index.toString()}
+        />
+
 
 
         </SafeAreaView>

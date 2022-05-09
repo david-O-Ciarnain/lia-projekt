@@ -7,7 +7,7 @@ export default [
         text: "Fönsterputsning av in- och utsida (två sidor) av alla fönster, fönsterdörrar och entrépartier"
     },
     {
-        text: "Rengöring av fönstersmuygar, fönsterbåge, fönsterkarm, fönsterbänkar samt fönsterbleck"
+        text: "Rengöring av fönstersmygar, fönsterbåge, fönsterkarm, fönsterbänkar samt fönsterbleck"
     },
     {
         text: "Vid kopplat fönster, putsning av in- och utsida samt mellan, totalt fyra sidor"

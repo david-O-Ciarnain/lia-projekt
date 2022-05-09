@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   checkbox: {
     alignSelf: "center",
-    marginHorizontal: 8
+    marginHorizontal: 8,
   },
   label: {
     margin: 8,
