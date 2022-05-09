@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {Text, StyleSheet, View } from "react-native";
 //import CheckBox from "@react-native-community/checkbox";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
+import { borderColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 
 
 
@@ -17,7 +18,8 @@ export default function Checkbox({text}) {
           //onValueChange={setSelection}
           style={styles.checkbox}
           fillColor="#4682B4"
-          size={35}
+          
+          size={15}
           text = {text}
         />
       </View>
@@ -28,19 +30,40 @@ export default function Checkbox({text}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+   
+    
+    
+    
+
+    
   },
   checkboxContainer: {
     flexDirection: "column",
-
+    height: 55,
+    justifyContent: "center",
+    borderBottomWidth:1,
+    borderTopWidth:1,
+    //borderWidth: 1,
+    borderColor: "#4682B4",
+    //borderRadius: 15,
+    padding: 3,
+    margin: 3,
+    backgroundColor: "#d9f1ff",
+    
+   
+   
+    
+    
   },
   checkbox: {
-    alignSelf: "center",
-    marginHorizontal: 8
+    alignContent:"flex-start",
+    marginHorizontal: 8,
+   
+    
+    
   },
   label: {
     margin: 8,
-
+    
   },
 });
