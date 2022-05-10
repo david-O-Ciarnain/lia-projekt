@@ -54,11 +54,4 @@ export default [
     {
         text: "Golvlister Golv"
     },
-    {
-        text: "Golvlister Golv"
-    },
-    {
-        text: "Golvlister Golv"
-    },
-    
 ]
