@@ -39,20 +39,14 @@ const styles = StyleSheet.create({
   },
   checkboxContainer: {
     flexDirection: "column",
-    height: 55,
+    height: 95,
     justifyContent: "center",
-    borderBottomWidth:1,
-    borderTopWidth:1,
-    //borderWidth: 1,
+    borderWidth: 1,
     borderColor: "#4682B4",
-    //borderRadius: 15,
-    padding: 3,
+    borderRadius: 15,
+    padding: 7,
     margin: 3,
     backgroundColor: "#d9f1ff",
-    
-   
-   
-    
     
   },
   checkbox: {

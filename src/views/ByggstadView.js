@@ -1,4 +1,4 @@
-import { SafeAreaView, Text, StyleSheet } from "react-native";
+import { SafeAreaView, Text, StyleSheet,ScrollView } from "react-native";
 import Header from "../components/header";
 import Checkbox from "../components/Checkbox";
 import { FlatList } from "react-native";
@@ -22,6 +22,7 @@ export default function ByggstadView() {
     return (
 
         <SafeAreaView>
+            <ScrollView>
             <Header />
             <Text>BYGGSTÄDNING</Text>
 
@@ -169,7 +170,7 @@ export default function ByggstadView() {
         keyExtractor={(item, index) => index.toString()}
         />
 
-
+</ScrollView>
 
         </SafeAreaView>
         
