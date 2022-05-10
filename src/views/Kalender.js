@@ -19,10 +19,8 @@ LocaleConfig.locales['sv'] = {
       'November',
       'December'
     ],
-    monthNamesShort: ['Janv.', 'Févr.', 'Mars', 'Avril', 'Mai', 'Juin', 'Juil.', 'Août', 'Sept.', 'Oct.', 'Nov.', 'Déc.'],
-    dayNames: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
-    dayNamesShort: ['Dim.', 'Lun.', 'Mar.', 'Mer.', 'Jeu.', 'Ven.', 'Sam.'],
-    today: "Aujourd'hui"
+    dayNames: ['Söndag', 'Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag'],
+    dayNamesShort: ['Sön.', 'Mån.', 'Tis.', 'Ons.', 'Tors.', 'Fre.', 'Lör.'],
   };
   LocaleConfig.defaultLocale = 'sv';
 
