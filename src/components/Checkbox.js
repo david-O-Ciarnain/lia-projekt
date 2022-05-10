@@ -7,6 +7,7 @@ import BouncyCheckbox from "react-native-bouncy-checkbox";
 
 export default function Checkbox({ text }) {
 
+
   const [isSelected, setSelection] = useState(false);
 
   return (
@@ -19,6 +20,7 @@ export default function Checkbox({ text }) {
           fillColor="#4682B4"
           size={35}
           text={text}
+          onPress={() => setSelection(!isSelected)}
         />
       </View>
     </View>

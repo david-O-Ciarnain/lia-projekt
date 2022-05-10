@@ -5,6 +5,7 @@ import HemstadView from './HemstadView'
 import StorstadView from './StorstadView'
 import Buttons from '../components/Buttons'
 import TESTarrayImg from '../components/TESTarrayImg'
+import TestChecView from './testChecView'
 
 
 export default function Checklistor() {
@@ -31,7 +32,13 @@ export default function Checklistor() {
             img: require("../../assets/mina_sidor.png"),
             title: "Hem Städ",
             screen: "HemstadView"
+        },
+        {
+            img: require("../../assets/mina_sidor.png"),
+            title: "Hem Städ",
+            screen: "TestChecView"
         }
+
     ]
 
     return (

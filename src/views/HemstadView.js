@@ -1,6 +1,8 @@
-import Header from "../components/header";
+
+import React, { useState } from 'react'
 import Checkbox from "../components/Checkbox";
-import { SafeAreaView, StyleSheet, Text } from "react-native";
+import BouncyCheckbox from "react-native-bouncy-checkbox";
+import { SafeAreaView, StyleSheet, Text, Button } from "react-native";
 import HemstadAllaRumArray from "../Lists/HemstadAllaRumArray"
 import HemstadKokArray from "../Lists/HemstadKokArray"
 import HemstadBadrumArray from "../Lists/HemstadBadrumArray"
@@ -10,7 +12,10 @@ import HemstadHallArray from "../Lists/HemstadHallArray";
 import { FlatList } from "react-native";
 
 
+
 export default function HemstadView() {
+
+
 
     return (
 
@@ -22,11 +27,14 @@ export default function HemstadView() {
             <Text>Alla rum</Text>
 
             <FlatList data={HemstadAllaRumArray} renderItem={({ item }) => {
-                return <Checkbox
+                return <BouncyCheckbox
                     text={item.text}
+                    onPress={() => handleChecklist(this)}
+
                 />
             }}
                 keyExtractor={(item, index) => index.toString()}
+
             />
 
             <Text>Kök</Text>
@@ -74,9 +82,15 @@ export default function HemstadView() {
             <FlatList data={HemstadHallArray} renderItem={({ item }) => {
                 return <Checkbox
                     text={item.text}
+
                 />
             }}
                 keyExtractor={(item, index) => index.toString()}
+            />
+            <Button
+                title="Press me"
+
+
             />
 
         </SafeAreaView>
@@ -84,3 +98,5 @@ export default function HemstadView() {
     )
 
 }
+
+

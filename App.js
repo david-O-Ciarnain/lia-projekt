@@ -18,6 +18,7 @@ import Kalender from './src/views/Kalender';
 import Sakerhetsdatablad from './src/views/Sakerhetsdatablad';
 import Checklistor from './src/views/Checklistor';
 import FlyttstadView from './src/views/FlyttstadView';
+import TestChecView from './src/views/testChecView'
 
 
 //const [userLoggedin, setUserLoggedin] = React.useState('false')
@@ -37,7 +38,8 @@ const navigator = createStackNavigator({
   ByggstadView: ByggstadView,
   StorstadView: StorstadView,
   FlyttstadView: FlyttstadView,
-  HemstadView: HemstadView
+  HemstadView: HemstadView,
+  TestChecView: TestChecView
 
 
 
