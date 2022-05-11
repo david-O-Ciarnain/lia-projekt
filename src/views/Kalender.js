@@ -3,6 +3,8 @@ import { View, StyleSheet,Text } from 'react-native';
 import { Calendar, LocaleConfig } from 'react-native-calendars';
 import moment from 'moment';
 import { TouchableOpacity } from 'react-native';
+import { Linking } from 'react-native';
+
 
 LocaleConfig.locales['sv'] = {
     monthNames: [
@@ -24,10 +26,25 @@ LocaleConfig.locales['sv'] = {
   };
   LocaleConfig.defaultLocale = 'sv';
 
+  
 
-export default class CalendarExample extends React.Component { 
+export default class Kalender extends React.Component { 
 
-   
+
+    getFromTo = (dateObject) => {
+
+        let keys = Object.keys(dateObject)
+           let x = {
+                from: keys[0],
+                to: keys[keys.length - 1]
+            }
+            return (
+               "Jag önskar ha ledigt fr.o.m " + x.from + ' till och med ' + x.to
+            )
+        }
+
+        //Att göra: Inputfält där anställd kan skriva - ska sedan hänga med i mailet.
+
     state = {
         markedDates: {},
         isStartDatePicked: false,
@@ -72,8 +89,13 @@ export default class CalendarExample extends React.Component {
         }
     }
 
+//console.log(this.getFromTo(this.state.markedDates)
+
+
     render() {
+        
         return (
+    
             <View style={styles.container}>
                 <Calendar
                     minDate={Date()}
@@ -85,14 +107,17 @@ export default class CalendarExample extends React.Component {
                     onDayPress={this.onDayPress}
                     style={styles.kalenderStyle}
                     showWeekNumbers={true}
+                    
+                    
                 />
+                
                 <View style= {styles.btnContainer}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => Linking.openURL(`mailto:JohnDoe@hotmail.com?subject=Semesteransökan&body=${this.getFromTo(this.state.markedDates)}`)}>
                 <View style={styles.leftBtn}>
                     <Text style ={styles.leftBtnText}>Semsteransökan</Text>
                 </View>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => Linking.openURL(`mailto:johnDoe@hotmail.com?subject=Ledighetsansökan&body=${this.getFromTo(this.state.markedDates)}`)}>
                 <View style={styles.rightBtn}>
                     <Text style ={styles.rightBtnText}>Ledighetsansökan</Text>
                 </View>

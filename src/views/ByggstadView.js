@@ -19,7 +19,7 @@ export default function ByggstadView() {
         <SafeAreaView>
             <Text>BYGGSTÄDNING</Text>
 
-            <Text> Generellt gäller att förekommande skyddstäckning på golv och i trappor ska tas bort,
+            <Text>Generellt gäller att förekommande skyddstäckning på golv och i trappor ska tas bort,
                 leverantörens städningsanvisningar för exempelvis trägolv, plastmatta, linoleum, textilmatta,
                 köksinredning, vitvaror, undertak, kakel och klinker mm. ska följas!
             </Text>
