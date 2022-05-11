@@ -31,21 +31,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
    
-    
-    
-    
-
-    
   },
   checkboxContainer: {
     flexDirection: "column",
-    height: 95,
+    height: 80,
     justifyContent: "center",
     borderWidth: 1,
     borderColor: "#4682B4",
     borderRadius: 15,
-    padding: 7,
-    margin: 3,
+    paddingRight:7,
+    margin: 2,
     backgroundColor: "#d9f1ff",
     
   },
