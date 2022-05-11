@@ -2,12 +2,8 @@ import React from 'react'
 import {
     StyleSheet,
     Text,
-    Button,
     View,
-    SafeAreaView,
-    Alert,
     Image,
-    TouchableHighlight,
     TouchableOpacity,
     Linking,
 

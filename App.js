@@ -18,7 +18,7 @@ import Kalender from './src/views/Kalender';
 import Sakerhetsdatablad from './src/views/Sakerhetsdatablad';
 import Checklistor from './src/views/Checklistor';
 import FlyttstadView from './src/views/FlyttstadView';
-import TestChecView from './src/views/testChecView'
+import TestChecView from './src/views/TestChecView'
 
 
 //const [userLoggedin, setUserLoggedin] = React.useState('false')

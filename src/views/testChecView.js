@@ -1,23 +1,20 @@
 import React, { Component } from 'react'
-import { View } from 'react-native'
+import { View, Button, Text } from 'react-native'
 import SelectMultiple from 'react-native-select-multiple'
 import ByggstadFonsterArray from '../Lists/ByggstadFonsterArray'
+import ByggstadHissArray from '../Lists/ByggstadHissArray'
 
-const fruits = ['Apples', 'Oranges', 'Pears']
-// --- OR ---
-// const fruits = [
-//   { label: 'Apples', value: 'appls' },
-//   { label: 'Oranges', value: 'orngs' },
-//   { label: 'Pears', value: 'pears' }
-// ]
+//Hämta från databasen
 
-class App extends Component {
-    state = { selectedFruits: [] }
+//städ uppgifter till den användaren, generera ut uppgifter med boolean värde t/f, onpress ändra värdet, en knapp för att uppdatera databasen,
 
-    onSelectionsChange = (selectedFruits) => {
-        // selectedFruits is array of { label, value }
-        this.setState({ selectedFruits })
-        console.log(selectedFruits)
+class TestChecView extends Component {
+    state = { selectedTasks: [] }
+
+    onSelectionsChange = (selectedTasks) => {
+
+        this.setState({ selectedTasks })
+
     }
 
     render() {
@@ -25,10 +22,18 @@ class App extends Component {
             <View>
                 <SelectMultiple
                     items={ByggstadFonsterArray}
-                    selectedItems={this.state.selectedFruits}
+                    selectedItems={this.state.selectedTasks}
                     onSelectionsChange={this.onSelectionsChange} />
+                <Text>Shitttt</Text>
+                <SelectMultiple
+                    items={ByggstadHissArray}
+                    selectedItems={this.state.selectedTasks}
+                    onSelectionsChange={this.onSelectionsChange} />
+                <Button
+                    title='Klicak'
+                    onPress={() => console.log(this.state.selectedTasks)} />
             </View>
         )
     }
 }
-export default App
+export default TestChecView

@@ -5,7 +5,7 @@ import HemstadView from './HemstadView'
 import StorstadView from './StorstadView'
 import Buttons from '../components/Buttons'
 import TESTarrayImg from '../components/TESTarrayImg'
-import TestChecView from './testChecView'
+import TestChecView from './TestChecView'
 
 
 export default function Checklistor() {
