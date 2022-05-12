@@ -147,7 +147,6 @@ const styles = StyleSheet.create({
        // backgroundColor: "blue",
         flexDirection: "row"
 
-
     },  
 
     leftBtn: {
@@ -160,7 +159,6 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 5,
         color: "#FFFFFF"
-    
     },
 
     leftBtnText: {
