@@ -38,7 +38,8 @@ export default [
     },
     {
         img: require("../../assets/nyhet.png"),
-        title: "TEST"
+        title: "MinaSidor",
+        screen: "MinaSidor"
     },
     {
         img: require("../../assets/nyhet.png"),
