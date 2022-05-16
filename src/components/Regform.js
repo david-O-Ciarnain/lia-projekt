@@ -72,13 +72,13 @@ export default function RegForm() {
                 placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
             />
 
-            <TextInput
+            {/* <TextInput
 
                 style={styles.textinput}
                 placeholder="Födelsedatum"
                 //onChangeText={(text) => setBirthday(text)}
                 placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
-            />
+            /> */}
 
             <TextInput
                 style={styles.textinput}
@@ -87,12 +87,12 @@ export default function RegForm() {
                 placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
             />
 
-            <TextInput
+            {/* <TextInput
                 style={styles.textinput}
                 placeholder="Användarnamn"
                 onChangeText={(text) => setUsername(text)}
                 placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
-            />
+            /> */}
 
             <TextInput
                 style={styles.textinput}
