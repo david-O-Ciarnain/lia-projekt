@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import {
     StyleSheet,
     Text,
@@ -7,60 +7,107 @@ import {
     TouchableOpacity,
 } from "react-native"
 
-export default class RegForm extends React.Component {
 
 
-    render() {  
-
-        return(
-            <View style={styles.regform}>
+export default function RegForm() {
 
 
-                <Text style={styles.header}>Registrering</Text>
 
-                <TextInput 
-                style={styles.textinput} 
-                placeholder="Namn" 
-                placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
-                />
+    const [username, setUsername] = React.useState('');
+    const [password, setPassword] = React.useState('');
+    const [firstname, setFirstname] = React.useState('');
+    const [lastname, setLastname] = React.useState('');
+    const [email, setEmail] = React.useState('');
+    // const [birthday, setBirthday] = React.useState('');
 
-                <TextInput 
-                style={styles.textinput} 
-                placeholder="Efternamn" 
-                placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/ 
-                />
 
-                <TextInput 
-                style={styles.textinput} 
-                placeholder="Födelsedatum" 
-                placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/ 
-                />
+    const handleCreateUser = async () => {
+        const test = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                firstName: firstname,
 
-                <TextInput 
-                style={styles.textinput} 
-                placeholder="E-mail" 
-                placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/ 
-                />
+                lastName: lastname,
 
-                <TextInput 
-                style={styles.textinput} 
-                placeholder="Användarnamn" 
-                placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/ 
-                />
+                username: email,
 
-                <TextInput 
-                style={styles.textinput} 
-                placeholder="Lösenord" 
-                placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
-                secureTextEntry={true} 
-                />
+                password: password,
 
-                <TouchableOpacity style={styles.regBtn}>
-                    <Text style={styles.btnText}>Skapa Användare</Text>
-                </TouchableOpacity>
-            </View>
-         )
+                email: email,
+
+
+            })
+        }
+
+        const response = await fetch('http://localhost:8080/test/registration', test);
+
+
     }
+
+
+
+
+
+
+    return (
+        <View style={styles.regform}>
+
+
+            <Text style={styles.header}>Registrering</Text>
+
+            <TextInput
+
+                style={styles.textinput}
+                placeholder="Namn"
+                onChangeText={(text) => setFirstname(text)}
+                placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
+            />
+
+            <TextInput
+
+                style={styles.textinput}
+                placeholder="Efternamn"
+                onChangeText={(text) => setLastname(text)}
+                placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
+            />
+
+            <TextInput
+
+                style={styles.textinput}
+                placeholder="Födelsedatum"
+                //onChangeText={(text) => setBirthday(text)}
+                placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
+            />
+
+            <TextInput
+                style={styles.textinput}
+                placeholder="E-mail"
+                onChangeText={(text) => setEmail(text)}
+                placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
+            />
+
+            <TextInput
+                style={styles.textinput}
+                placeholder="Användarnamn"
+                onChangeText={(text) => setUsername(text)}
+                placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
+            />
+
+            <TextInput
+                style={styles.textinput}
+                placeholder="Lösenord"
+                onChangeText={(text) => setPassword(text)}
+                placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
+                secureTextEntry={true}
+            />
+
+            <TouchableOpacity style={styles.regBtn}>
+                <Text style={styles.btnText} onPress={handleCreateUser}>Skapa Användare</Text>
+            </TouchableOpacity>
+        </View>
+    )
+
 }
 
 const styles = StyleSheet.create({
@@ -79,8 +126,8 @@ const styles = StyleSheet.create({
         // shadowColor: "#000",
         // shadowOpacity: 0.8,
         // shadowRadius: 2,
-    
-        
+
+
     },
 
     textinput: {

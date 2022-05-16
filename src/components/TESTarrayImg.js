@@ -43,6 +43,7 @@ export default [
     },
     {
         img: require("../../assets/nyhet.png"),
-        title: "TEST"
+        title: "Regristera användare",
+        screen: "RegView"
     },
 ]

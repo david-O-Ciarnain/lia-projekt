@@ -17,13 +17,9 @@ export default function ByggstadView() {
 
     return (
 
-<<<<<<< HEAD
         <SafeAreaView style={styles.scroll}>
 
 
-=======
-        <SafeAreaView>
->>>>>>> a2d3061cdd9a793bcfda4797922020c83f8526af
             <Text>BYGGSTÄDNING</Text>
 
             <Text>Generellt gäller att förekommande skyddstäckning på golv och i trappor ska tas bort,
@@ -33,7 +29,6 @@ export default function ByggstadView() {
 
             <Text>Fönsterputsning</Text>
 
-<<<<<<< HEAD
             <FlatList
                 style={styles.scroll}
                 data={ByggstadFonsterArray} renderItem={({ item }) => {
@@ -73,9 +68,6 @@ export default function ByggstadView() {
             <Text>Avtorkning och rengöring av följande: </Text>
 
             <FlatList data={ByggstadVatrumArray} renderItem={({ item }) => {
-=======
-            <FlatList data={ByggstadFonsterArray} renderItem={({ item }) => {
->>>>>>> a2d3061cdd9a793bcfda4797922020c83f8526af
                 return <Checkbox
                     text={item.text}
                 />
@@ -83,77 +75,15 @@ export default function ByggstadView() {
                 keyExtractor={(item, index) => index.toString()}
             />
 
-<<<<<<< HEAD
             <Text>Inglasat uterum/balkong</Text>
 
             <FlatList data={ByggstadUtermBalkongArray} renderItem={({ item }) => {
-=======
-            <Text>Rum</Text>
-            <Text>Avtorkning och rengöring av följande: </Text>
-
-            <FlatList data={ByggstadRumArray} renderItem={({ item }) => {
->>>>>>> a2d3061cdd9a793bcfda4797922020c83f8526af
                 return <Checkbox
                     text={item.text}
                 />
             }}
                 keyExtractor={(item, index) => index.toString()}
             />
-
-<<<<<<< HEAD
-            <Text>Trapphall</Text>
-            <Text>Avtorkning och rengöring av följande: </Text>
-
-            <FlatList data={ByggstadTrapphallArray} renderItem={({ item }) => {
-=======
-            <Text>Kök</Text>
-            <Text>Avtorkning och rengöring av följande: </Text>
-
-            <FlatList data={ByggstadKokArray} renderItem={({ item }) => {
->>>>>>> a2d3061cdd9a793bcfda4797922020c83f8526af
-                return <Checkbox
-                    text={item.text}
-                />
-            }}
-                keyExtractor={(item, index) => index.toString()}
-            />
-
-<<<<<<< HEAD
-            <Text>Hiss</Text>
-            <Text>Avtorkning och rengöring av följande: </Text>
-
-            <FlatList data={ByggstadHissArray} renderItem={({ item }) => {
-=======
-            <Text>Våtrum</Text>
-            <Text>Avtorkning och rengöring av följande: </Text>
-
-            <FlatList data={ByggstadVatrumArray} renderItem={({ item }) => {
->>>>>>> a2d3061cdd9a793bcfda4797922020c83f8526af
-                return <Checkbox
-                    text={item.text}
-                />
-            }}
-                keyExtractor={(item, index) => index.toString()}
-            />
-
-<<<<<<< HEAD
-
-            <Text>Tillägskrav vid städning av teknikutrymmen samt förråd</Text>
-
-            <FlatList data={ByggstadTillaggArray} renderItem={({ item }) => {
-=======
-            <Text>Inglasat uterum/balkong</Text>
-
-            <FlatList data={ByggstadUtermBalkongArray} renderItem={({ item }) => {
->>>>>>> a2d3061cdd9a793bcfda4797922020c83f8526af
-                return <Checkbox
-                    text={item.text}
-                />
-            }}
-                keyExtractor={(item, index) => index.toString()}
-            />
-<<<<<<< HEAD
-=======
 
             <Text>Trapphall</Text>
             <Text>Avtorkning och rengöring av följande: </Text>
@@ -177,6 +107,7 @@ export default function ByggstadView() {
                 keyExtractor={(item, index) => index.toString()}
             />
 
+
             <Text>Tillägskrav vid städning av teknikutrymmen samt förråd</Text>
 
             <FlatList data={ByggstadTillaggArray} renderItem={({ item }) => {
@@ -186,7 +117,6 @@ export default function ByggstadView() {
             }}
                 keyExtractor={(item, index) => index.toString()}
             />
->>>>>>> a2d3061cdd9a793bcfda4797922020c83f8526af
 
 
         </SafeAreaView>

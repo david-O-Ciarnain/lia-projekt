@@ -9,7 +9,6 @@ import ByggstadView from "./src/views/ByggstadView";
 import HemstadView from "./src/views/HemstadView";
 import StorstadView from "./src/views/StorstadView";
 import Index from "./src/views/View";
-<<<<<<< HEAD
 import MinaSidor from "./src/views/MinaSidor";
 import Header from "./src/components/header";
 import LoginScreen from "./src/views/Login";
@@ -20,6 +19,7 @@ import Sakerhetsdatablad from './src/views/Sakerhetsdatablad';
 import Checklistor from './src/views/Checklistor';
 import FlyttstadView from './src/views/FlyttstadView';
 import TestChecView from './src/views/TestChecView'
+import RegView from './src/views/RegView';
 
 
 //const [userLoggedin, setUserLoggedin] = React.useState('false')
@@ -40,7 +40,8 @@ const navigator = createStackNavigator({
   StorstadView: StorstadView,
   FlyttstadView: FlyttstadView,
   HemstadView: HemstadView,
-  TestChecView: TestChecView
+  TestChecView: TestChecView,
+  RegView: RegView
 
 
 
@@ -65,22 +66,6 @@ const styles = StyleSheet.create({
 })
 
 export default createAppContainer(navigator)
-=======
-import Kalender from "./src/views/Kalender"
-import RegisterFormView from "./src/views/RegisterFormView";
-
-export default function App() {
-  return (
-    <RegisterFormView />
-    // <SafeAreaView style={styles.container}>
-    //   <Image
-    //     style={styles.header}
-    //     source={require("./assets/CS_logo_vert.png")}
-    //   />
-    // </SafeAreaView>
-  );
-}
->>>>>>> a2d3061cdd9a793bcfda4797922020c83f8526af
 
 
 

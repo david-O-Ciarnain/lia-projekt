@@ -1,24 +1,5 @@
-<<<<<<< HEAD
-import { View, Image, Text } from 'react-native'
-import { Calendar, CalendarList, Agenda, Arrow } from 'react-native-calendars';
-import { LocaleConfig } from 'react-native-calendars';
-
-
-export default function Kalender() {
-
-    return (
-        <View>
-            <Image source={require("../../assets/arbetsmiljöhandbok.png")} />
-            <Text>Kalender</Text>
-            <Calendar
-                enableSwipeMonths={true}
-            />
-        </View>
-    )
-}
-=======
 import * as React from 'react';
-import { View, StyleSheet,Text } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import { Calendar, LocaleConfig } from 'react-native-calendars';
 import moment from 'moment';
 import { TouchableOpacity } from 'react-native';
@@ -27,42 +8,42 @@ import { Linking } from 'react-native';
 
 LocaleConfig.locales['sv'] = {
     monthNames: [
-      'Januari',
-      'Februari',
-      'Mars',
-      'April',
-      'Maj',
-      'Juni',
-      'Juli',
-      'Augusti',
-      'September',
-      'Oktober',
-      'November',
-      'December'
+        'Januari',
+        'Februari',
+        'Mars',
+        'April',
+        'Maj',
+        'Juni',
+        'Juli',
+        'Augusti',
+        'September',
+        'Oktober',
+        'November',
+        'December'
     ],
     dayNames: ['Söndag', 'Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag'],
     dayNamesShort: ['Sön.', 'Mån.', 'Tis.', 'Ons.', 'Tors.', 'Fre.', 'Lör.'],
-  };
-  LocaleConfig.defaultLocale = 'sv';
+};
+LocaleConfig.defaultLocale = 'sv';
 
-  
 
-export default class Kalender extends React.Component { 
+
+export default class Kalender extends React.Component {
 
 
     getFromTo = (dateObject) => {
 
         let keys = Object.keys(dateObject)
-           let x = {
-                from: keys[0],
-                to: keys[keys.length - 1]
-            }
-            return (
-               "Jag önskar ha ledigt fr.o.m " + x.from + ' till och med ' + x.to
-            )
+        let x = {
+            from: keys[0],
+            to: keys[keys.length - 1]
         }
+        return (
+            "Jag önskar ha ledigt fr.o.m " + x.from + ' till och med ' + x.to
+        )
+    }
 
-        //Att göra: Inputfält där anställd kan skriva - ska sedan hänga med i mailet.
+    //Att göra: Inputfält där anställd kan skriva - ska sedan hänga med i mailet.
 
     state = {
         markedDates: {},
@@ -108,13 +89,13 @@ export default class Kalender extends React.Component {
         }
     }
 
-//console.log(this.getFromTo(this.state.markedDates)
+    //console.log(this.getFromTo(this.state.markedDates)
 
 
     render() {
-        
+
         return (
-    
+
             <View style={styles.container}>
                 <Calendar
                     minDate={Date()}
@@ -122,25 +103,25 @@ export default class Kalender extends React.Component {
                     markedDates={this.state.markedDates}
                     markingType="period"
                     hideExtraDays={true}
-                   // hideDayNames={true}
+                    // hideDayNames={true}
                     onDayPress={this.onDayPress}
                     style={styles.kalenderStyle}
                     showWeekNumbers={true}
-                    
-                    
+
+
                 />
-                
-                <View style= {styles.btnContainer}>
-                <TouchableOpacity onPress={() => Linking.openURL(`mailto:JohnDoe@hotmail.com?subject=Semesteransökan&body=${this.getFromTo(this.state.markedDates)}`)}>
-                <View style={styles.leftBtn}>
-                    <Text style ={styles.leftBtnText}>Semsteransökan</Text>
-                </View>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => Linking.openURL(`mailto:johnDoe@hotmail.com?subject=Ledighetsansökan&body=${this.getFromTo(this.state.markedDates)}`)}>
-                <View style={styles.rightBtn}>
-                    <Text style ={styles.rightBtnText}>Ledighetsansökan</Text>
-                </View>
-                </TouchableOpacity>
+
+                <View style={styles.btnContainer}>
+                    <TouchableOpacity onPress={() => Linking.openURL(`mailto:JohnDoe@hotmail.com?subject=Semesteransökan&body=${this.getFromTo(this.state.markedDates)}`)}>
+                        <View style={styles.leftBtn}>
+                            <Text style={styles.leftBtnText}>Semsteransökan</Text>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => Linking.openURL(`mailto:johnDoe@hotmail.com?subject=Ledighetsansökan&body=${this.getFromTo(this.state.markedDates)}`)}>
+                        <View style={styles.rightBtn}>
+                            <Text style={styles.rightBtnText}>Ledighetsansökan</Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
             </View>
         );
@@ -163,10 +144,10 @@ const styles = StyleSheet.create({
 
     btnContainer: {
         justifyContent: "space-between",
-       // backgroundColor: "blue",
+        // backgroundColor: "blue",
         flexDirection: "row"
 
-    },  
+    },
 
     leftBtn: {
         backgroundColor: "#4682B4",
@@ -200,4 +181,3 @@ const styles = StyleSheet.create({
     },
 });
 
->>>>>>> a2d3061cdd9a793bcfda4797922020c83f8526af
