@@ -30,11 +30,18 @@ export default function Checkbox({ text }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+
   },
   checkboxContainer: {
     flexDirection: "column",
+    height: 80,
+    justifyContent: "center",
+    borderWidth: 1,
+    borderColor: "#4682B4",
+    borderRadius: 15,
+    paddingRight: 7,
+    margin: 2,
+    backgroundColor: "#d9f1ff",
 
   },
   checkbox: {

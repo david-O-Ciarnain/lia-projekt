@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet, Text } from "react-native";
+import { SafeAreaView, StyleSheet, Text, ScrollView, Image, StatusBar } from "react-native";
 import Checkbox from "../components/Checkbox";
 import Header from "../components/header";
 import { FlatList } from "react-native";
