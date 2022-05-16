@@ -129,7 +129,6 @@ export default function ByggstadView() {
 const styles = StyleSheet.create(
     {
         scroll: {
-            backgroundColor: "green",
             flex: 1,
             overflow: "visible",
             height: "100%",

@@ -4,45 +4,61 @@ import {
     Text,
     View,
     TextInput,
-    TouchableOpacity,
+    Button,
+    Alert
 } from "react-native"
-
 
 
 export default function RegForm() {
 
-
-
-    const [username, setUsername] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [firstname, setFirstname] = React.useState('');
     const [lastname, setLastname] = React.useState('');
     const [email, setEmail] = React.useState('');
-    // const [birthday, setBirthday] = React.useState('');
-
 
     const handleCreateUser = async () => {
-        const test = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                firstName: firstname,
+        if (firstname.length < 2) {
+            alert("Vänligen ange ett förnamn")
+        } else if (lastname.length < 2) {
+            alert("Vänligen ange ett efternamn")
+        } else if (email.length < 4) {
+            alert("Vänligen ange en email")
+        }
+        else if (password.length < 4) {
+            console.log("test")
+            alert("Lösenordet måste vara minst 4 tecken!")
+        } else {
+            console.log("hej")
+            const test = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    firstName: firstname,
 
-                lastName: lastname,
+                    lastName: lastname,
 
-                username: email,
+                    username: email,
 
-                password: password,
+                    password: password,
 
-                email: email,
+                    email: email,
 
 
-            })
+                })
+            }
+            const response = await fetch('http://localhost:8080/test/registration', test);
+            console.log(response)
+            clearTextFields();
+
         }
 
-        const response = await fetch('http://localhost:8080/test/registration', test);
+    }
 
-
+    function clearTextFields() {
+        let textFields = document.querySelectorAll("input");
+        textFields.forEach(input => {
+            input.value = "";
+        })
     }
 
 
@@ -55,56 +71,50 @@ export default function RegForm() {
 
 
             <Text style={styles.header}>Registrering</Text>
+            <View>
+                <TextInput
 
-            <TextInput
+                    style={styles.textinput}
+                    placeholder="Namn"
+                    onChangeText={(text) => setFirstname(text)}
+                    placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
+                />
 
-                style={styles.textinput}
-                placeholder="Namn"
-                onChangeText={(text) => setFirstname(text)}
-                placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
+                <TextInput
+
+                    style={styles.textinput}
+                    placeholder="Efternamn"
+                    onChangeText={(text) => setLastname(text)}
+                    placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
+                />
+
+
+
+
+                <TextInput
+                    style={styles.textinput}
+                    placeholder="E-mail"
+                    onChangeText={(text) => setEmail(text)}
+                    placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
+                />
+
+
+                <TextInput
+                    style={styles.textinput}
+                    placeholder="Lösenord"
+                    onChangeText={(text) => setPassword(text)}
+                    placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
+                    secureTextEntry={true}
+                />
+            </View>
+
+            <Button
+                title="Test klick"
+                onPress={handleCreateUser}
             />
-
-            <TextInput
-
-                style={styles.textinput}
-                placeholder="Efternamn"
-                onChangeText={(text) => setLastname(text)}
-                placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
-            />
-
-            {/* <TextInput
-
-                style={styles.textinput}
-                placeholder="Födelsedatum"
-                //onChangeText={(text) => setBirthday(text)}
-                placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
-            /> */}
-
-            <TextInput
-                style={styles.textinput}
-                placeholder="E-mail"
-                onChangeText={(text) => setEmail(text)}
-                placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
-            />
-
-            {/* <TextInput
-                style={styles.textinput}
-                placeholder="Användarnamn"
-                onChangeText={(text) => setUsername(text)}
-                placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
-            /> */}
-
-            <TextInput
-                style={styles.textinput}
-                placeholder="Lösenord"
-                onChangeText={(text) => setPassword(text)}
-                placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
-                secureTextEntry={true}
-            />
-
-            <TouchableOpacity style={styles.regBtn}>
-                <Text style={styles.btnText} onPress={handleCreateUser}>Skapa Användare</Text>
-            </TouchableOpacity>
+            {/* <Text style={styles.btnText} onPressOut={console.log("klicked")}>Skapa Användare</Text> */}
+            {/* <TouchableOpacity style={styles.regBtn}>
+            </TouchableOpacity> */}
         </View>
     )
 
