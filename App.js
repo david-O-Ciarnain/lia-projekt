@@ -4,11 +4,13 @@ import ChecklistView from "./src/views/FlyttstadView";
 import HemstadView from "./src/views/HemstadView";
 import StorstadView from "./src/views/StorstadView";
 import FlyttstadView from "./src/views/FlyttstadView";
+import NyhetsView from "./src/views/NyhetsView";
+import View from "./src/views/View";
 import Index from "./src/views/View";
 
 export default function App() {
   return (
-    <StorstadView />
+    <NyhetsView/>
     // <SafeAreaView style={styles.container}>
     //   <Image
     //     style={styles.header}
@@ -17,6 +19,5 @@ export default function App() {
     // </SafeAreaView>
   );
 }
-
 
 
