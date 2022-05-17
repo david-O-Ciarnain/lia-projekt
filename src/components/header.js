@@ -9,9 +9,7 @@ import {
   Image,
   TouchableHighlight,
 } from "react-native";
-import { ScreenStack } from "react-native-screens";
-import { StackActions, StackRouter } from "react-navigation";
-import { createStackNavigator, StackView } from "react-navigation-stack";
+
 
 
 
@@ -39,7 +37,7 @@ const styles = StyleSheet.create({
 
   header: {
     marginTop: 30,
-    width: "90%",
+    width: "100%",
     height: 50,
     resizeMode: "contain",
     alignItems: "center",

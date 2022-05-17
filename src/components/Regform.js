@@ -7,6 +7,7 @@ import {
     Button,
     Alert
 } from "react-native"
+import DropDownPicker from "react-native-dropdown-picker";
 
 
 export default function RegForm() {
@@ -15,6 +16,14 @@ export default function RegForm() {
     const [firstname, setFirstname] = React.useState('');
     const [lastname, setLastname] = React.useState('');
     const [email, setEmail] = React.useState('');
+    const [open, setOpen] = React.useState(false);
+    const [value, setValue] = React.useState(null);
+    const [items, setItems] = React.useState([
+        { label: 'Anställd', value: 'ROLE_USER' },
+        { label: 'Chef', value: 'ROLE_ADMIN' },
+        { label: 'Chefens Chef', value: 'ROLE_SUPER_ADMIN' }
+    ]);
+    const [userRole, setUserRole] = React.useState('');
 
     const handleCreateUser = async () => {
         if (firstname.length < 2) {
@@ -43,6 +52,8 @@ export default function RegForm() {
 
                     email: email,
 
+                    roles: value
+
 
                 })
             }
@@ -55,6 +66,7 @@ export default function RegForm() {
     }
 
     function clearTextFields() {
+        setValue(null)
         let textFields = document.querySelectorAll("input");
         textFields.forEach(input => {
             input.value = "";
@@ -106,6 +118,24 @@ export default function RegForm() {
                     placeholderTextColor={"#fff"} /*underlineColorAndroid={"transparent"}*/
                     secureTextEntry={true}
                 />
+                <DropDownPicker
+                    dropDownContainerStyle={{
+                        backgroundColor: "#3492eb"
+                    }}
+                    listItemLabelStyle={styles.btnText}
+                    placeholder="Välj roll"
+                    placeholderStyle={styles.btnText}
+                    open={open}
+                    value={value}
+                    items={items}
+                    setOpen={setOpen}
+                    setValue={setValue}
+                    setItems={setItems}
+                    onChangeValue={() => {
+                        console.log(value)
+                    }}
+                />
+
             </View>
 
             <Button
@@ -168,5 +198,9 @@ const styles = StyleSheet.create({
     btnText: {
         color: "#fff",
         fontWeight: "bold",
+    },
+    dropStyle: {
+        color: "white",
+
     }
 })

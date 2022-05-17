@@ -3,30 +3,30 @@ export default [
     // BYGGSTÄD
     // HISS
 
-
-    "Undertak"
-    ,
-
-    "Armaturer (fast belysning)"
-    ,
-
-    "Väggar"
-    ,
-
-    "Manöverpanel/väggpanel"
-    ,
-
-    "Speglar"
-    ,
-
-    "Ledstänger"
-    ,
-
-    "Fällsits"
-    ,
-
-    "Golv, golvsockel"
-    ,
-
-    "Dörrar"
-]
+    {
+        text: "Undertak"
+    },
+    {
+        text: "Armaturer (fast belysning)"
+    },
+    {
+        text: "Väggar"
+    },
+    {
+        text: "Manöverpanel/väggpanel"
+    },
+    {
+        text: "Speglar"
+    },
+    {
+        text: "Ledstänger"
+    },
+    {
+        text: "Fällsits"
+    },
+    {
+        text: "Golv, golvsockel"
+    },
+    {
+        text: "Dörrar"
+    }]
