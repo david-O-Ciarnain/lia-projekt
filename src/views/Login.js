@@ -46,6 +46,8 @@ const handleLogin = async (users, username, password) => {
     //call till backend
     //om succes return ny main view?
     //annars stanna på login och visa error
+    //json username passowrd
+    fetch("localhost:8080")
 
     console.log(username + " ---- " + password)
 }

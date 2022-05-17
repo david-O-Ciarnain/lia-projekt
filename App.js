@@ -51,9 +51,9 @@ const navigator = createStackNavigator({
     title: "",
     headerBackground: () => <Header />,
     headerBackTitleVisible: false,
-    animationEnabled: false
-
+    animationEnabled: false,
   }
+
 })
 
 const styles = StyleSheet.create({
@@ -62,6 +62,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "normal",
     color: "#fff"
+  },
+  header: {
+    backgroundColor: "yellow"
   }
 })
 

@@ -1,6 +1,5 @@
 import { SafeAreaView, StyleSheet, Text, ScrollView, Image, StatusBar } from "react-native";
 import Checkbox from "../components/Checkbox";
-import Header from "../components/header";
 import { FlatList } from "react-native";
 import FlyttstadKokArray from "../Lists/FlyttstadKokArray";
 import FlyttstadRumArray from "../Lists/FlyttstadRumArray";
@@ -14,7 +13,7 @@ export default function FlyttstadView() {
         <SafeAreaView>
             <Text>FLYTTSTÄDNING</Text>
 
-            <Text>Observera att även om du följer denna checklista, har du ansvar att städa detaljer som eventuellt inte finns med på listan</Text>
+            <Text>Observera att även om du följer denna checklista, har du ansvar att städa detaljer som eventuellt inte finns med på listan!</Text>
 
             <Text>Kök</Text>
 

@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
 
   header: {
     marginTop: 30,
-    width: "90%",
+    width: "100%",
     height: 50,
     resizeMode: "contain",
     alignItems: "center",

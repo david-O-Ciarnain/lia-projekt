@@ -1,16 +1,6 @@
 import React, { useState } from "react";
 import { TextInput, View, StyleSheet, Button, Modal } from "react-native";
 
-const users = [
-    {
-        username: "test1",
-        password: "abc"
-    },
-    {
-        username: "test2",
-        password: "123"
-    }
-]
 
 const handleLogin = (username, password) => {
     console.log("Test")
