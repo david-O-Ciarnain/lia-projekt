@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {Text, StyleSheet, View } from "react-native";
 //import CheckBox from "@react-native-community/checkbox";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
-import { borderColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
+
 
 
 

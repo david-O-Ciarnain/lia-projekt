@@ -14,6 +14,7 @@ import{Ionicons} from '@expo/vector-icons';
 import React, { useState } from "react";
 import { Formik } from "formik";
 
+
 export default function NewsForm({addArticle}) {
 
     return(
