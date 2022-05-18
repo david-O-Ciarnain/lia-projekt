@@ -13,9 +13,54 @@ import Header from "../components/header";
 import{Ionicons} from '@expo/vector-icons';
 import React, { useState } from "react";
 import { Formik } from "formik";
+import sockjs from 'sockjs-client'
+import {over} from 'stompjs'
 
-
+let stompClient = null
 export default function NewsForm({addArticle}) {
+    const [news, setNews]=useState([
+        {title:''
+        , fulltext:''
+        , key:'0'}
+        
+    ]);
+
+    const connect =() =>{
+        let sock = new sockjs('http://localhost:8080/chat')
+        stompClient = over(sock)
+        stompClient.connect({},onConnected,onError) 
+    }
+    const onConnected =() =>{
+       
+        setNews({...news,'connected':true})
+        stompClient.subscribe('/chatroom',(payload) => showMessageOutput(JSON.parse(payload.body)))
+        sendMessage()
+
+    }
+    handelTitle = (event) => {
+        const {value} = event.target
+        setNews({...news,"title":value})
+    }
+
+    handelMessage = (event) => {
+        const {value} = event.target
+        setNews({...news,"fulltext":value})
+    }
+
+    const sendMessage = () =>{
+        let newsMessage = {
+            title: news.title,
+            fulltext: news.fulltext
+        }
+        console.log(newsMessage)
+        stompClient.send('/massMailing/messages',{},JSON.stringify(newsMessage))   
+        setNews({...news,"title":''})
+        setNews({...news,'fulltext':''})
+    } 
+
+
+
+    const onError = err => console.log(err)
 
     return(
        
@@ -32,13 +77,13 @@ export default function NewsForm({addArticle}) {
                                 style={styles.title}
                                 value={props.values.title}
                                 placeholder='Titel'
-                                onChangeText={props.handleChange('title')}/>
+                                onChangeText={handelTitle()}/> //props.handleChange('fulltext')
 
                             <TextInput multiline
                                 style={styles.fulltext}
                                 value={props.values.fulltext}
                                 placeholder='Text'
-                                onChangeText={props.handleChange('fulltext')}/>
+                                onChangeText={handelMessage()}/> //props.handleChange('fulltext')
 
                             <Button 
                             title="Lägg till nyhet" 
