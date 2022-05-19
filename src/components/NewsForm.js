@@ -15,21 +15,47 @@ import React, { useState } from "react";
 import { Formik } from "formik";
 import sockjs from 'sockjs-client'
 import {over} from 'stompjs'
+import axios from 'axios'
 
 let stompClient = null
 export default function NewsForm({addArticle}) {
     const [news, setNews]=useState([
-        {title:''
-        , fulltext:''
-        , key:'0'}
-        
+        {
+        title:'',
+        fulltext:''
+        }
+    
     ]);
+
+    function post(path,data){
+        return axios.get('/csrf')
+        .then(tokenResp => {
+            let config = {
+                headers:{
+                    'X-CSRF-TOKEN': tokenResp.data.token,
+                }
+            }
+            return axios.post(path,data,config)
+        })
+        .then(res => res.data)
+    }
+   let headerName = '${X-CSRF-TOKEN}'
+    let token = '${_csrf.token}'
+    let headers ={}
+    headers[headerName] = token
+
+    let sendData = {
+        title: news.title,
+        fulltext: news.fulltext
+    }
 
     const connect =() =>{
         let sock = new sockjs('http://localhost:8080/chat')
         stompClient = over(sock)
-        stompClient.connect({},onConnected,onError) 
+        stompClient.connect({headers},onConnected,onError) 
+        
     }
+    
     const onConnected =() =>{
        
         setNews({...news,'connected':true})
@@ -37,15 +63,7 @@ export default function NewsForm({addArticle}) {
         sendMessage()
 
     }
-    handelTitle = (event) => {
-        const {value} = event.target
-        setNews({...news,"title":value})
-    }
-
-    handelMessage = (event) => {
-        const {value} = event.target
-        setNews({...news,"fulltext":value})
-    }
+   
 
     const sendMessage = () =>{
         let newsMessage = {
@@ -61,7 +79,7 @@ export default function NewsForm({addArticle}) {
 
 
     const onError = err => console.log(err)
-
+       connect()
     return(
        
         <View >
@@ -77,13 +95,13 @@ export default function NewsForm({addArticle}) {
                                 style={styles.title}
                                 value={props.values.title}
                                 placeholder='Titel'
-                                onChangeText={handelTitle()}/> //props.handleChange('fulltext')
+                                onChangeText={props.handleChange('title')}/> //
 
                             <TextInput multiline
                                 style={styles.fulltext}
                                 value={props.values.fulltext}
                                 placeholder='Text'
-                                onChangeText={handelMessage()}/> //props.handleChange('fulltext')
+                                onChangeText={props.handleChange('fulltext')}/> //
 
                             <Button 
                             title="Lägg till nyhet" 

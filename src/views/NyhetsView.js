@@ -19,7 +19,17 @@ import NewsForm from "../components/NewsForm";
 
 
 export default function NyhetsView() {
-
+    const [news, setNews]=useState([
+        {title:'test',
+         fulltext:'test',
+         key :"1"
+        },
+        {title:'test',
+        fulltext:'test',
+        key :"2"
+       }
+        
+    ]);
    
 
     const [modalWindow, setModalWindow]=useState(false);
@@ -43,7 +53,7 @@ export default function NyhetsView() {
 
       };
 
-      connect()
+     
     return (
         <SafeAreaView  style={styles.background} >
         <Header />
