@@ -1,11 +1,6 @@
 import { View, Image, Text, FlatList } from 'react-native'
-import ByggstadView from './ByggstadView'
-import FlyttstadView from './FlyttstadView'
-import HemstadView from './HemstadView'
-import StorstadView from './StorstadView'
 import Buttons from '../components/Buttons'
-import TESTarrayImg from '../components/TESTarrayImg'
-import TestChecView from './TestChecView'
+
 
 
 export default function Checklistor() {
