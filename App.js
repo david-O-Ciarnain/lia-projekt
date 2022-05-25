@@ -9,7 +9,7 @@ import RegisterFormView from "./src/views/RegisterFormView";
 
 export default function App() {
   return (
-    <RegisterFormView />
+    <Kalender />
     // <SafeAreaView style={styles.container}>
     //   <Image
     //     style={styles.header}
