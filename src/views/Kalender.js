@@ -4,6 +4,7 @@ import { Calendar, LocaleConfig } from 'react-native-calendars';
 import moment from 'moment';
 import { TouchableOpacity } from 'react-native';
 import { Linking } from 'react-native';
+import { TextInput } from 'react-native';
 
 
 LocaleConfig.locales['sv'] = {
@@ -28,8 +29,8 @@ LocaleConfig.locales['sv'] = {
 
   
 
-export default class Kalender extends React.Component { 
-
+export default class Kalender extends React.Component {
+    
 
     getFromTo = (dateObject) => {
 
@@ -43,7 +44,6 @@ export default class Kalender extends React.Component {
             )
         }
 
-        //Att göra: Inputfält där anställd kan skriva - ska sedan hänga med i mailet.
 
     state = {
         markedDates: {},
@@ -110,18 +110,29 @@ export default class Kalender extends React.Component {
                     
                     
                 />
+
                 
                 <View style= {styles.btnContainer}>
-                <TouchableOpacity onPress={() => Linking.openURL(`mailto:JohnDoe@hotmail.com?subject=Semesteransökan&body=${this.getFromTo(this.state.markedDates)}`)}>
+                <TouchableOpacity onPress={() => Linking.openURL(`mailto:JohnDoe@hotmail.com?subject=Semesteransökan&body=${this.getFromTo(this.state.markedDates)}%0D%0A%0D%0A${this.state.txtInputValue}`)}>
                 <View style={styles.leftBtn}>
                     <Text style ={styles.leftBtnText}>Semsteransökan</Text>
                 </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => Linking.openURL(`mailto:johnDoe@hotmail.com?subject=Ledighetsansökan&body=${this.getFromTo(this.state.markedDates)}`)}>
+                <TouchableOpacity onPress={() => Linking.openURL(`mailto:johnDoe@hotmail.com?subject=Ledighetsansökan&body=${this.getFromTo(this.state.markedDates)}%0D%0A%0D%0A${this.state.txtInputValue}`)}>
                 <View style={styles.rightBtn}>
                     <Text style ={styles.rightBtnText}>Ledighetsansökan</Text>
                 </View>
                 </TouchableOpacity>
+                </View>
+                <View>
+                    <TextInput 
+                        style={styles.txtInputStyle}
+                        multiline = {true}
+                        numberOfLines={5}
+                        placeholder="Skriv en notis"
+                        onChangeText={(value) => this.setState({txtInputValue: value})}
+                        value={this.state.txtInputValue}
+                    />
                 </View>
             </View>
         );
@@ -179,5 +190,16 @@ const styles = StyleSheet.create({
     rightBtnText: {
         color: '#FFFFFF',
     },
+
+    txtInputStyle: {
+        backgroundColor: "#fff",
+        marginTop: 25,
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: 5,
+        padding: 5,
+        
+    }
+
 });
 
