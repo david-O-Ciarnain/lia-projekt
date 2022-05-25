@@ -29,24 +29,27 @@ export default function Checkbox({ text }) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
 
   },
   checkboxContainer: {
     flexDirection: "column",
     height: 80,
-    justifyContent: "center",
+    // justifyContent: "center",
     borderWidth: 1,
     borderColor: "#4682B4",
     borderRadius: 15,
     paddingRight: 7,
     margin: 2,
     backgroundColor: "#d9f1ff",
+    
+    
 
   },
   checkbox: {
-    alignSelf: "center",
-    marginHorizontal: 8,
+    // alignSelf: "center",
+    // marginHorizontal: 8,
+    margin : 10
   },
   label: {
     margin: 8,

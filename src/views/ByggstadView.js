@@ -204,6 +204,7 @@ export default function ByggstadView() {
 
 const styles = StyleSheet.create({
     background: {
+        height: "100%"
         //overflow:"scroll",
 
     },
