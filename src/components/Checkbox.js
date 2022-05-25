@@ -18,6 +18,7 @@ export default function Checkbox({ text }) {
           onValueChange={setSelection}
           style={styles.checkbox}
           fillColor="#4682B4"
+          textContainerStyle={styles.textStyle}
           size={35}
           text={text}
           onPress={() => setSelection(!isSelected)}
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
   checkboxContainer: {
     flexDirection: "column",
     height: 80,
-    // justifyContent: "center",
+    justifyContent: "center",
     borderWidth: 1,
     borderColor: "#4682B4",
     borderRadius: 15,
@@ -49,10 +50,15 @@ const styles = StyleSheet.create({
   checkbox: {
     // alignSelf: "center",
     // marginHorizontal: 8,
-    margin : 10
+    margin : 10,
+    overflow: "visible"
   },
   label: {
     margin: 8,
 
   },
+
+  textStyle : {
+    flexShrink: 1
+  }
 });
